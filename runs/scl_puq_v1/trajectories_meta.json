@@ -1,0 +1,1346 @@
+{
+  "SCL-PUQ_out_FL330_gs470_2020-02_E_ICRP103_dt5": {
+    "label": "Trayectoria geodésica sintética; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "SCEL",
+      "destination": "SCCI",
+      "profile": "FL330",
+      "airborne_min": 150,
+      "departure_utc": "2020-02-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 2178.581817961272,
+      "ground_speed_kt": 470.53602979725093,
+      "profile_knots_min": [
+        0.0,
+        25.0,
+        120.0,
+        150.0
+      ],
+      "profile_knots_alt_ft": [
+        1555.0,
+        33000.0,
+        33000.0,
+        139.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-PUQ",
+      "direction": "outbound",
+      "date": "2020-02",
+      "duration": "gs470"
+    },
+    "southernmost": {
+      "lat": -53.002602,
+      "lon": -70.854599,
+      "t_min": 150.0
+    },
+    "distance_km": 2178.5818179612725,
+    "warnings": []
+  },
+  "SCL-PUQ_out_FL330_gs470_2024-10_E_ICRP103_dt5": {
+    "label": "Trayectoria geodésica sintética; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "SCEL",
+      "destination": "SCCI",
+      "profile": "FL330",
+      "airborne_min": 150,
+      "departure_utc": "2024-10-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 2178.581817961272,
+      "ground_speed_kt": 470.53602979725093,
+      "profile_knots_min": [
+        0.0,
+        25.0,
+        120.0,
+        150.0
+      ],
+      "profile_knots_alt_ft": [
+        1555.0,
+        33000.0,
+        33000.0,
+        139.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-PUQ",
+      "direction": "outbound",
+      "date": "2024-10",
+      "duration": "gs470"
+    },
+    "southernmost": {
+      "lat": -53.002602,
+      "lon": -70.854599,
+      "t_min": 150.0
+    },
+    "distance_km": 2178.5818179612725,
+    "warnings": []
+  },
+  "SCL-PUQ_out_FL330_gs470_2026-08_E_ICRP103_dt5": {
+    "label": "Trayectoria geodésica sintética; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "SCEL",
+      "destination": "SCCI",
+      "profile": "FL330",
+      "airborne_min": 150,
+      "departure_utc": "2026-08-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 2178.581817961272,
+      "ground_speed_kt": 470.53602979725093,
+      "profile_knots_min": [
+        0.0,
+        25.0,
+        120.0,
+        150.0
+      ],
+      "profile_knots_alt_ft": [
+        1555.0,
+        33000.0,
+        33000.0,
+        139.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-PUQ",
+      "direction": "outbound",
+      "date": "2026-08",
+      "duration": "gs470"
+    },
+    "southernmost": {
+      "lat": -53.002602,
+      "lon": -70.854599,
+      "t_min": 150.0
+    },
+    "distance_km": 2178.5818179612725,
+    "warnings": []
+  },
+  "SCL-PUQ_out_FL370_gs470_2020-02_E_ICRP103_dt5": {
+    "label": "Trayectoria geodésica sintética; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "SCEL",
+      "destination": "SCCI",
+      "profile": "FL370",
+      "airborne_min": 150,
+      "departure_utc": "2020-02-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 2178.581817961272,
+      "ground_speed_kt": 470.53602979725093,
+      "profile_knots_min": [
+        0.0,
+        30.0,
+        118.0,
+        150.0
+      ],
+      "profile_knots_alt_ft": [
+        1555.0,
+        37000.0,
+        37000.0,
+        139.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-PUQ",
+      "direction": "outbound",
+      "date": "2020-02",
+      "duration": "gs470"
+    },
+    "southernmost": {
+      "lat": -53.002602,
+      "lon": -70.854599,
+      "t_min": 150.0
+    },
+    "distance_km": 2178.581817961272,
+    "warnings": []
+  },
+  "SCL-PUQ_out_FL370_gs470_2024-10_E_ICRP103_dt5": {
+    "label": "Trayectoria geodésica sintética; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "SCEL",
+      "destination": "SCCI",
+      "profile": "FL370",
+      "airborne_min": 150,
+      "departure_utc": "2024-10-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 2178.581817961272,
+      "ground_speed_kt": 470.53602979725093,
+      "profile_knots_min": [
+        0.0,
+        30.0,
+        118.0,
+        150.0
+      ],
+      "profile_knots_alt_ft": [
+        1555.0,
+        37000.0,
+        37000.0,
+        139.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-PUQ",
+      "direction": "outbound",
+      "date": "2024-10",
+      "duration": "gs470"
+    },
+    "southernmost": {
+      "lat": -53.002602,
+      "lon": -70.854599,
+      "t_min": 150.0
+    },
+    "distance_km": 2178.581817961272,
+    "warnings": []
+  },
+  "SCL-PUQ_out_FL370_gs470_2026-08_E_ICRP103_dt5": {
+    "label": "Trayectoria geodésica sintética; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "SCEL",
+      "destination": "SCCI",
+      "profile": "FL370",
+      "airborne_min": 150,
+      "departure_utc": "2026-08-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 2178.581817961272,
+      "ground_speed_kt": 470.53602979725093,
+      "profile_knots_min": [
+        0.0,
+        30.0,
+        118.0,
+        150.0
+      ],
+      "profile_knots_alt_ft": [
+        1555.0,
+        37000.0,
+        37000.0,
+        139.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-PUQ",
+      "direction": "outbound",
+      "date": "2026-08",
+      "duration": "gs470"
+    },
+    "southernmost": {
+      "lat": -53.002602,
+      "lon": -70.854599,
+      "t_min": 150.0
+    },
+    "distance_km": 2178.581817961272,
+    "warnings": []
+  },
+  "SCL-PUQ_out_FL390_gs470_2020-02_E_ICRP103_dt5": {
+    "label": "Trayectoria geodésica sintética; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "SCEL",
+      "destination": "SCCI",
+      "profile": "FL390",
+      "airborne_min": 150,
+      "departure_utc": "2020-02-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 2178.581817961272,
+      "ground_speed_kt": 470.53602979725093,
+      "profile_knots_min": [
+        0.0,
+        34.0,
+        117.0,
+        150.0
+      ],
+      "profile_knots_alt_ft": [
+        1555.0,
+        39000.0,
+        39000.0,
+        139.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-PUQ",
+      "direction": "outbound",
+      "date": "2020-02",
+      "duration": "gs470"
+    },
+    "southernmost": {
+      "lat": -53.002602,
+      "lon": -70.854599,
+      "t_min": 150.0
+    },
+    "distance_km": 2178.581817961273,
+    "warnings": []
+  },
+  "SCL-PUQ_out_FL390_gs470_2024-10_E_ICRP103_dt5": {
+    "label": "Trayectoria geodésica sintética; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "SCEL",
+      "destination": "SCCI",
+      "profile": "FL390",
+      "airborne_min": 150,
+      "departure_utc": "2024-10-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 2178.581817961272,
+      "ground_speed_kt": 470.53602979725093,
+      "profile_knots_min": [
+        0.0,
+        34.0,
+        117.0,
+        150.0
+      ],
+      "profile_knots_alt_ft": [
+        1555.0,
+        39000.0,
+        39000.0,
+        139.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-PUQ",
+      "direction": "outbound",
+      "date": "2024-10",
+      "duration": "gs470"
+    },
+    "southernmost": {
+      "lat": -53.002602,
+      "lon": -70.854599,
+      "t_min": 150.0
+    },
+    "distance_km": 2178.581817961273,
+    "warnings": []
+  },
+  "SCL-PUQ_out_FL390_gs470_2026-08_E_ICRP103_dt5": {
+    "label": "Trayectoria geodésica sintética; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "SCEL",
+      "destination": "SCCI",
+      "profile": "FL390",
+      "airborne_min": 150,
+      "departure_utc": "2026-08-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 2178.581817961272,
+      "ground_speed_kt": 470.53602979725093,
+      "profile_knots_min": [
+        0.0,
+        34.0,
+        117.0,
+        150.0
+      ],
+      "profile_knots_alt_ft": [
+        1555.0,
+        39000.0,
+        39000.0,
+        139.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-PUQ",
+      "direction": "outbound",
+      "date": "2026-08",
+      "duration": "gs470"
+    },
+    "southernmost": {
+      "lat": -53.002602,
+      "lon": -70.854599,
+      "t_min": 150.0
+    },
+    "distance_km": 2178.581817961273,
+    "warnings": []
+  },
+  "SCL-PUQ_in_FL330_gs470_2020-02_E_ICRP103_dt5": {
+    "label": "Trayectoria geodésica sintética; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "SCCI",
+      "destination": "SCEL",
+      "profile": "FL330",
+      "airborne_min": 150,
+      "departure_utc": "2020-02-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 2178.581817961272,
+      "ground_speed_kt": 470.53602979725093,
+      "profile_knots_min": [
+        0.0,
+        25.0,
+        120.0,
+        150.0
+      ],
+      "profile_knots_alt_ft": [
+        139.0,
+        33000.0,
+        33000.0,
+        1555.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-PUQ",
+      "direction": "inbound",
+      "date": "2020-02",
+      "duration": "gs470"
+    },
+    "southernmost": {
+      "lat": -53.00260200000002,
+      "lon": -70.854599,
+      "t_min": 0.0
+    },
+    "distance_km": 2178.5818179612716,
+    "warnings": []
+  },
+  "SCL-PUQ_in_FL330_gs470_2024-10_E_ICRP103_dt5": {
+    "label": "Trayectoria geodésica sintética; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "SCCI",
+      "destination": "SCEL",
+      "profile": "FL330",
+      "airborne_min": 150,
+      "departure_utc": "2024-10-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 2178.581817961272,
+      "ground_speed_kt": 470.53602979725093,
+      "profile_knots_min": [
+        0.0,
+        25.0,
+        120.0,
+        150.0
+      ],
+      "profile_knots_alt_ft": [
+        139.0,
+        33000.0,
+        33000.0,
+        1555.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-PUQ",
+      "direction": "inbound",
+      "date": "2024-10",
+      "duration": "gs470"
+    },
+    "southernmost": {
+      "lat": -53.00260200000002,
+      "lon": -70.854599,
+      "t_min": 0.0
+    },
+    "distance_km": 2178.5818179612716,
+    "warnings": []
+  },
+  "SCL-PUQ_in_FL330_gs470_2026-08_E_ICRP103_dt5": {
+    "label": "Trayectoria geodésica sintética; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "SCCI",
+      "destination": "SCEL",
+      "profile": "FL330",
+      "airborne_min": 150,
+      "departure_utc": "2026-08-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 2178.581817961272,
+      "ground_speed_kt": 470.53602979725093,
+      "profile_knots_min": [
+        0.0,
+        25.0,
+        120.0,
+        150.0
+      ],
+      "profile_knots_alt_ft": [
+        139.0,
+        33000.0,
+        33000.0,
+        1555.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-PUQ",
+      "direction": "inbound",
+      "date": "2026-08",
+      "duration": "gs470"
+    },
+    "southernmost": {
+      "lat": -53.00260200000002,
+      "lon": -70.854599,
+      "t_min": 0.0
+    },
+    "distance_km": 2178.5818179612716,
+    "warnings": []
+  },
+  "SCL-PUQ_in_FL370_gs470_2020-02_E_ICRP103_dt5": {
+    "label": "Trayectoria geodésica sintética; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "SCCI",
+      "destination": "SCEL",
+      "profile": "FL370",
+      "airborne_min": 150,
+      "departure_utc": "2020-02-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 2178.581817961272,
+      "ground_speed_kt": 470.53602979725093,
+      "profile_knots_min": [
+        0.0,
+        30.0,
+        118.0,
+        150.0
+      ],
+      "profile_knots_alt_ft": [
+        139.0,
+        37000.0,
+        37000.0,
+        1555.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-PUQ",
+      "direction": "inbound",
+      "date": "2020-02",
+      "duration": "gs470"
+    },
+    "southernmost": {
+      "lat": -53.00260200000002,
+      "lon": -70.854599,
+      "t_min": 0.0
+    },
+    "distance_km": 2178.581817961272,
+    "warnings": []
+  },
+  "SCL-PUQ_in_FL370_gs470_2024-10_E_ICRP103_dt5": {
+    "label": "Trayectoria geodésica sintética; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "SCCI",
+      "destination": "SCEL",
+      "profile": "FL370",
+      "airborne_min": 150,
+      "departure_utc": "2024-10-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 2178.581817961272,
+      "ground_speed_kt": 470.53602979725093,
+      "profile_knots_min": [
+        0.0,
+        30.0,
+        118.0,
+        150.0
+      ],
+      "profile_knots_alt_ft": [
+        139.0,
+        37000.0,
+        37000.0,
+        1555.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-PUQ",
+      "direction": "inbound",
+      "date": "2024-10",
+      "duration": "gs470"
+    },
+    "southernmost": {
+      "lat": -53.00260200000002,
+      "lon": -70.854599,
+      "t_min": 0.0
+    },
+    "distance_km": 2178.581817961272,
+    "warnings": []
+  },
+  "SCL-PUQ_in_FL370_gs470_2026-08_E_ICRP103_dt5": {
+    "label": "Trayectoria geodésica sintética; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "SCCI",
+      "destination": "SCEL",
+      "profile": "FL370",
+      "airborne_min": 150,
+      "departure_utc": "2026-08-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 2178.581817961272,
+      "ground_speed_kt": 470.53602979725093,
+      "profile_knots_min": [
+        0.0,
+        30.0,
+        118.0,
+        150.0
+      ],
+      "profile_knots_alt_ft": [
+        139.0,
+        37000.0,
+        37000.0,
+        1555.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-PUQ",
+      "direction": "inbound",
+      "date": "2026-08",
+      "duration": "gs470"
+    },
+    "southernmost": {
+      "lat": -53.00260200000002,
+      "lon": -70.854599,
+      "t_min": 0.0
+    },
+    "distance_km": 2178.581817961272,
+    "warnings": []
+  },
+  "SCL-PUQ_in_FL390_gs470_2020-02_E_ICRP103_dt5": {
+    "label": "Trayectoria geodésica sintética; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "SCCI",
+      "destination": "SCEL",
+      "profile": "FL390",
+      "airborne_min": 150,
+      "departure_utc": "2020-02-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 2178.581817961272,
+      "ground_speed_kt": 470.53602979725093,
+      "profile_knots_min": [
+        0.0,
+        34.0,
+        117.0,
+        150.0
+      ],
+      "profile_knots_alt_ft": [
+        139.0,
+        39000.0,
+        39000.0,
+        1555.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-PUQ",
+      "direction": "inbound",
+      "date": "2020-02",
+      "duration": "gs470"
+    },
+    "southernmost": {
+      "lat": -53.00260200000002,
+      "lon": -70.854599,
+      "t_min": 0.0
+    },
+    "distance_km": 2178.5818179612725,
+    "warnings": []
+  },
+  "SCL-PUQ_in_FL390_gs470_2024-10_E_ICRP103_dt5": {
+    "label": "Trayectoria geodésica sintética; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "SCCI",
+      "destination": "SCEL",
+      "profile": "FL390",
+      "airborne_min": 150,
+      "departure_utc": "2024-10-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 2178.581817961272,
+      "ground_speed_kt": 470.53602979725093,
+      "profile_knots_min": [
+        0.0,
+        34.0,
+        117.0,
+        150.0
+      ],
+      "profile_knots_alt_ft": [
+        139.0,
+        39000.0,
+        39000.0,
+        1555.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-PUQ",
+      "direction": "inbound",
+      "date": "2024-10",
+      "duration": "gs470"
+    },
+    "southernmost": {
+      "lat": -53.00260200000002,
+      "lon": -70.854599,
+      "t_min": 0.0
+    },
+    "distance_km": 2178.5818179612725,
+    "warnings": []
+  },
+  "SCL-PUQ_in_FL390_gs470_2026-08_E_ICRP103_dt5": {
+    "label": "Trayectoria geodésica sintética; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "SCCI",
+      "destination": "SCEL",
+      "profile": "FL390",
+      "airborne_min": 150,
+      "departure_utc": "2026-08-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 2178.581817961272,
+      "ground_speed_kt": 470.53602979725093,
+      "profile_knots_min": [
+        0.0,
+        34.0,
+        117.0,
+        150.0
+      ],
+      "profile_knots_alt_ft": [
+        139.0,
+        39000.0,
+        39000.0,
+        1555.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-PUQ",
+      "direction": "inbound",
+      "date": "2026-08",
+      "duration": "gs470"
+    },
+    "southernmost": {
+      "lat": -53.00260200000002,
+      "lon": -70.854599,
+      "t_min": 0.0
+    },
+    "distance_km": 2178.5818179612725,
+    "warnings": []
+  },
+  "SCL-PUQ_out_FL370_gs400_2020-02_E_ICRP103_dt5": {
+    "label": "Trayectoria geodésica sintética; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "SCEL",
+      "destination": "SCCI",
+      "profile": "FL370",
+      "airborne_min": 176,
+      "departure_utc": "2020-02-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 2178.581817961272,
+      "ground_speed_kt": 401.0250253953843,
+      "profile_knots_min": [
+        0.0,
+        30.0,
+        144.0,
+        176.0
+      ],
+      "profile_knots_alt_ft": [
+        1555.0,
+        37000.0,
+        37000.0,
+        139.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-PUQ",
+      "direction": "outbound",
+      "date": "2020-02",
+      "duration": "gs400"
+    },
+    "southernmost": {
+      "lat": -53.002602,
+      "lon": -70.854599,
+      "t_min": 176.0
+    },
+    "distance_km": 2178.5818179612725,
+    "warnings": []
+  },
+  "SCL-PUQ_out_FL370_gs400_2024-10_E_ICRP103_dt5": {
+    "label": "Trayectoria geodésica sintética; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "SCEL",
+      "destination": "SCCI",
+      "profile": "FL370",
+      "airborne_min": 176,
+      "departure_utc": "2024-10-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 2178.581817961272,
+      "ground_speed_kt": 401.0250253953843,
+      "profile_knots_min": [
+        0.0,
+        30.0,
+        144.0,
+        176.0
+      ],
+      "profile_knots_alt_ft": [
+        1555.0,
+        37000.0,
+        37000.0,
+        139.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-PUQ",
+      "direction": "outbound",
+      "date": "2024-10",
+      "duration": "gs400"
+    },
+    "southernmost": {
+      "lat": -53.002602,
+      "lon": -70.854599,
+      "t_min": 176.0
+    },
+    "distance_km": 2178.5818179612725,
+    "warnings": []
+  },
+  "SCL-PUQ_out_FL370_gs400_2026-08_E_ICRP103_dt5": {
+    "label": "Trayectoria geodésica sintética; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "SCEL",
+      "destination": "SCCI",
+      "profile": "FL370",
+      "airborne_min": 176,
+      "departure_utc": "2026-08-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 2178.581817961272,
+      "ground_speed_kt": 401.0250253953843,
+      "profile_knots_min": [
+        0.0,
+        30.0,
+        144.0,
+        176.0
+      ],
+      "profile_knots_alt_ft": [
+        1555.0,
+        37000.0,
+        37000.0,
+        139.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-PUQ",
+      "direction": "outbound",
+      "date": "2026-08",
+      "duration": "gs400"
+    },
+    "southernmost": {
+      "lat": -53.002602,
+      "lon": -70.854599,
+      "t_min": 176.0
+    },
+    "distance_km": 2178.5818179612725,
+    "warnings": []
+  },
+  "SCL-PUQ_in_FL370_gs400_2020-02_E_ICRP103_dt5": {
+    "label": "Trayectoria geodésica sintética; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "SCCI",
+      "destination": "SCEL",
+      "profile": "FL370",
+      "airborne_min": 176,
+      "departure_utc": "2020-02-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 2178.581817961272,
+      "ground_speed_kt": 401.0250253953843,
+      "profile_knots_min": [
+        0.0,
+        30.0,
+        144.0,
+        176.0
+      ],
+      "profile_knots_alt_ft": [
+        139.0,
+        37000.0,
+        37000.0,
+        1555.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-PUQ",
+      "direction": "inbound",
+      "date": "2020-02",
+      "duration": "gs400"
+    },
+    "southernmost": {
+      "lat": -53.00260200000002,
+      "lon": -70.854599,
+      "t_min": 0.0
+    },
+    "distance_km": 2178.5818179612743,
+    "warnings": []
+  },
+  "SCL-PUQ_in_FL370_gs400_2024-10_E_ICRP103_dt5": {
+    "label": "Trayectoria geodésica sintética; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "SCCI",
+      "destination": "SCEL",
+      "profile": "FL370",
+      "airborne_min": 176,
+      "departure_utc": "2024-10-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 2178.581817961272,
+      "ground_speed_kt": 401.0250253953843,
+      "profile_knots_min": [
+        0.0,
+        30.0,
+        144.0,
+        176.0
+      ],
+      "profile_knots_alt_ft": [
+        139.0,
+        37000.0,
+        37000.0,
+        1555.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-PUQ",
+      "direction": "inbound",
+      "date": "2024-10",
+      "duration": "gs400"
+    },
+    "southernmost": {
+      "lat": -53.00260200000002,
+      "lon": -70.854599,
+      "t_min": 0.0
+    },
+    "distance_km": 2178.5818179612743,
+    "warnings": []
+  },
+  "SCL-PUQ_in_FL370_gs400_2026-08_E_ICRP103_dt5": {
+    "label": "Trayectoria geodésica sintética; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "SCCI",
+      "destination": "SCEL",
+      "profile": "FL370",
+      "airborne_min": 176,
+      "departure_utc": "2026-08-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 2178.581817961272,
+      "ground_speed_kt": 401.0250253953843,
+      "profile_knots_min": [
+        0.0,
+        30.0,
+        144.0,
+        176.0
+      ],
+      "profile_knots_alt_ft": [
+        139.0,
+        37000.0,
+        37000.0,
+        1555.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-PUQ",
+      "direction": "inbound",
+      "date": "2026-08",
+      "duration": "gs400"
+    },
+    "southernmost": {
+      "lat": -53.00260200000002,
+      "lon": -70.854599,
+      "t_min": 0.0
+    },
+    "distance_km": 2178.5818179612743,
+    "warnings": []
+  },
+  "SCL-PUQ_out_FL370_gs470_2020-02_E_ICRP103_dt2": {
+    "label": "Trayectoria geodésica sintética; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "SCEL",
+      "destination": "SCCI",
+      "profile": "FL370",
+      "airborne_min": 150,
+      "departure_utc": "2020-02-15T03:00:00+00:00",
+      "sample_min": 2.0,
+      "geodesic_distance_km": 2178.581817961272,
+      "ground_speed_kt": 470.53602979725093,
+      "profile_knots_min": [
+        0.0,
+        30.0,
+        118.0,
+        150.0
+      ],
+      "profile_knots_alt_ft": [
+        1555.0,
+        37000.0,
+        37000.0,
+        139.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-PUQ",
+      "direction": "outbound",
+      "date": "2020-02",
+      "duration": "gs470"
+    },
+    "southernmost": {
+      "lat": -53.002602,
+      "lon": -70.854599,
+      "t_min": 150.0
+    },
+    "distance_km": 2178.5818179612675,
+    "warnings": []
+  },
+  "SCL-PUQ_out_FL370_gs470_2020-02_E_ICRP103_dt1": {
+    "label": "Trayectoria geodésica sintética; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "SCEL",
+      "destination": "SCCI",
+      "profile": "FL370",
+      "airborne_min": 150,
+      "departure_utc": "2020-02-15T03:00:00+00:00",
+      "sample_min": 1.0,
+      "geodesic_distance_km": 2178.581817961272,
+      "ground_speed_kt": 470.53602979725093,
+      "profile_knots_min": [
+        0.0,
+        30.0,
+        118.0,
+        150.0
+      ],
+      "profile_knots_alt_ft": [
+        1555.0,
+        37000.0,
+        37000.0,
+        139.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-PUQ",
+      "direction": "outbound",
+      "date": "2020-02",
+      "duration": "gs470"
+    },
+    "southernmost": {
+      "lat": -53.002602,
+      "lon": -70.854599,
+      "t_min": 150.0
+    },
+    "distance_km": 2178.581817961275,
+    "warnings": []
+  },
+  "SCL-PUQ_out_FL370_gs470_2020-02_H10_dt5": {
+    "label": "Trayectoria geodésica sintética; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "SCEL",
+      "destination": "SCCI",
+      "profile": "FL370",
+      "airborne_min": 150,
+      "departure_utc": "2020-02-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 2178.581817961272,
+      "ground_speed_kt": 470.53602979725093,
+      "profile_knots_min": [
+        0.0,
+        30.0,
+        118.0,
+        150.0
+      ],
+      "profile_knots_alt_ft": [
+        1555.0,
+        37000.0,
+        37000.0,
+        139.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-PUQ",
+      "direction": "outbound",
+      "date": "2020-02",
+      "duration": "gs470"
+    },
+    "southernmost": {
+      "lat": -53.002602,
+      "lon": -70.854599,
+      "t_min": 150.0
+    },
+    "distance_km": 2178.581817961272,
+    "warnings": []
+  },
+  "SCL-PUQ_out_FL370_gs470_2020-02_D_WB_dt5": {
+    "label": "Trayectoria geodésica sintética; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "SCEL",
+      "destination": "SCCI",
+      "profile": "FL370",
+      "airborne_min": 150,
+      "departure_utc": "2020-02-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 2178.581817961272,
+      "ground_speed_kt": 470.53602979725093,
+      "profile_knots_min": [
+        0.0,
+        30.0,
+        118.0,
+        150.0
+      ],
+      "profile_knots_alt_ft": [
+        1555.0,
+        37000.0,
+        37000.0,
+        139.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-PUQ",
+      "direction": "outbound",
+      "date": "2020-02",
+      "duration": "gs470"
+    },
+    "southernmost": {
+      "lat": -53.002602,
+      "lon": -70.854599,
+      "t_min": 150.0
+    },
+    "distance_km": 2178.581817961272,
+    "warnings": []
+  },
+  "SCL-PUQ_out_FL370_gs470_2024-10_H10_dt5": {
+    "label": "Trayectoria geodésica sintética; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "SCEL",
+      "destination": "SCCI",
+      "profile": "FL370",
+      "airborne_min": 150,
+      "departure_utc": "2024-10-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 2178.581817961272,
+      "ground_speed_kt": 470.53602979725093,
+      "profile_knots_min": [
+        0.0,
+        30.0,
+        118.0,
+        150.0
+      ],
+      "profile_knots_alt_ft": [
+        1555.0,
+        37000.0,
+        37000.0,
+        139.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-PUQ",
+      "direction": "outbound",
+      "date": "2024-10",
+      "duration": "gs470"
+    },
+    "southernmost": {
+      "lat": -53.002602,
+      "lon": -70.854599,
+      "t_min": 150.0
+    },
+    "distance_km": 2178.581817961272,
+    "warnings": []
+  },
+  "SCL-PUQ_out_FL370_gs470_2024-10_D_WB_dt5": {
+    "label": "Trayectoria geodésica sintética; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "SCEL",
+      "destination": "SCCI",
+      "profile": "FL370",
+      "airborne_min": 150,
+      "departure_utc": "2024-10-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 2178.581817961272,
+      "ground_speed_kt": 470.53602979725093,
+      "profile_knots_min": [
+        0.0,
+        30.0,
+        118.0,
+        150.0
+      ],
+      "profile_knots_alt_ft": [
+        1555.0,
+        37000.0,
+        37000.0,
+        139.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-PUQ",
+      "direction": "outbound",
+      "date": "2024-10",
+      "duration": "gs470"
+    },
+    "southernmost": {
+      "lat": -53.002602,
+      "lon": -70.854599,
+      "t_min": 150.0
+    },
+    "distance_km": 2178.581817961272,
+    "warnings": []
+  },
+  "SCL-PUQ_out_FL370_gs470_2026-08_H10_dt5": {
+    "label": "Trayectoria geodésica sintética; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "SCEL",
+      "destination": "SCCI",
+      "profile": "FL370",
+      "airborne_min": 150,
+      "departure_utc": "2026-08-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 2178.581817961272,
+      "ground_speed_kt": 470.53602979725093,
+      "profile_knots_min": [
+        0.0,
+        30.0,
+        118.0,
+        150.0
+      ],
+      "profile_knots_alt_ft": [
+        1555.0,
+        37000.0,
+        37000.0,
+        139.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-PUQ",
+      "direction": "outbound",
+      "date": "2026-08",
+      "duration": "gs470"
+    },
+    "southernmost": {
+      "lat": -53.002602,
+      "lon": -70.854599,
+      "t_min": 150.0
+    },
+    "distance_km": 2178.581817961272,
+    "warnings": []
+  },
+  "SCL-PUQ_out_FL370_gs470_2026-08_D_WB_dt5": {
+    "label": "Trayectoria geodésica sintética; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "SCEL",
+      "destination": "SCCI",
+      "profile": "FL370",
+      "airborne_min": 150,
+      "departure_utc": "2026-08-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 2178.581817961272,
+      "ground_speed_kt": 470.53602979725093,
+      "profile_knots_min": [
+        0.0,
+        30.0,
+        118.0,
+        150.0
+      ],
+      "profile_knots_alt_ft": [
+        1555.0,
+        37000.0,
+        37000.0,
+        139.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-PUQ",
+      "direction": "outbound",
+      "date": "2026-08",
+      "duration": "gs470"
+    },
+    "southernmost": {
+      "lat": -53.002602,
+      "lon": -70.854599,
+      "t_min": 150.0
+    },
+    "distance_km": 2178.581817961272,
+    "warnings": []
+  }
+}

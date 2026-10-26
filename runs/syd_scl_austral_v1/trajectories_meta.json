@@ -1,0 +1,1058 @@
+{
+  "SCL-SYD_in_FL330_gs470_2020-02_E_ICRP103_dt5": {
+    "label": "Trayectoria geodésica sintética; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "YSSY",
+      "destination": "SCEL",
+      "profile": "FL330",
+      "airborne_min": 783,
+      "departure_utc": "2020-02-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 11362.612623868292,
+      "path_distance_km": 11362.612623868292,
+      "n_via_waypoints": 0,
+      "ground_speed_kt": 470.13946293406696,
+      "profile_knots_min": [
+        0.0,
+        25.0,
+        753.0,
+        783.0
+      ],
+      "profile_knots_alt_ft": [
+        21.0,
+        33000.0,
+        33000.0,
+        1555.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-SYD",
+      "direction": "inbound",
+      "date": "2020-02",
+      "duration": "gs470"
+    },
+    "southernmost": {
+      "lat": -61.830213803296466,
+      "lon": -139.7384464513105,
+      "t_min": 390.0
+    },
+    "distance_km": 11362.612623868308,
+    "warnings": []
+  },
+  "SCL-SYD_in_FL330_gs470_2024-10_E_ICRP103_dt5": {
+    "label": "Trayectoria geodésica sintética; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "YSSY",
+      "destination": "SCEL",
+      "profile": "FL330",
+      "airborne_min": 783,
+      "departure_utc": "2024-10-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 11362.612623868292,
+      "path_distance_km": 11362.612623868292,
+      "n_via_waypoints": 0,
+      "ground_speed_kt": 470.13946293406696,
+      "profile_knots_min": [
+        0.0,
+        25.0,
+        753.0,
+        783.0
+      ],
+      "profile_knots_alt_ft": [
+        21.0,
+        33000.0,
+        33000.0,
+        1555.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-SYD",
+      "direction": "inbound",
+      "date": "2024-10",
+      "duration": "gs470"
+    },
+    "southernmost": {
+      "lat": -61.830213803296466,
+      "lon": -139.7384464513105,
+      "t_min": 390.0
+    },
+    "distance_km": 11362.612623868308,
+    "warnings": []
+  },
+  "SCL-SYD_in_FL330_gs470_2026-08_E_ICRP103_dt5": {
+    "label": "Trayectoria geodésica sintética; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "YSSY",
+      "destination": "SCEL",
+      "profile": "FL330",
+      "airborne_min": 783,
+      "departure_utc": "2026-08-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 11362.612623868292,
+      "path_distance_km": 11362.612623868292,
+      "n_via_waypoints": 0,
+      "ground_speed_kt": 470.13946293406696,
+      "profile_knots_min": [
+        0.0,
+        25.0,
+        753.0,
+        783.0
+      ],
+      "profile_knots_alt_ft": [
+        21.0,
+        33000.0,
+        33000.0,
+        1555.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-SYD",
+      "direction": "inbound",
+      "date": "2026-08",
+      "duration": "gs470"
+    },
+    "southernmost": {
+      "lat": -61.830213803296466,
+      "lon": -139.7384464513105,
+      "t_min": 390.0
+    },
+    "distance_km": 11362.612623868308,
+    "warnings": []
+  },
+  "SCL-SYD_in_FL370_gs470_2020-02_E_ICRP103_dt5": {
+    "label": "Trayectoria geodésica sintética; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "YSSY",
+      "destination": "SCEL",
+      "profile": "FL370",
+      "airborne_min": 783,
+      "departure_utc": "2020-02-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 11362.612623868292,
+      "path_distance_km": 11362.612623868292,
+      "n_via_waypoints": 0,
+      "ground_speed_kt": 470.13946293406696,
+      "profile_knots_min": [
+        0.0,
+        30.0,
+        751.0,
+        783.0
+      ],
+      "profile_knots_alt_ft": [
+        21.0,
+        37000.0,
+        37000.0,
+        1555.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-SYD",
+      "direction": "inbound",
+      "date": "2020-02",
+      "duration": "gs470"
+    },
+    "southernmost": {
+      "lat": -61.830213803296466,
+      "lon": -139.7384464513105,
+      "t_min": 390.0
+    },
+    "distance_km": 11362.612623868306,
+    "warnings": []
+  },
+  "SCL-SYD_in_FL370_gs470_2024-10_E_ICRP103_dt5": {
+    "label": "Trayectoria geodésica sintética; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "YSSY",
+      "destination": "SCEL",
+      "profile": "FL370",
+      "airborne_min": 783,
+      "departure_utc": "2024-10-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 11362.612623868292,
+      "path_distance_km": 11362.612623868292,
+      "n_via_waypoints": 0,
+      "ground_speed_kt": 470.13946293406696,
+      "profile_knots_min": [
+        0.0,
+        30.0,
+        751.0,
+        783.0
+      ],
+      "profile_knots_alt_ft": [
+        21.0,
+        37000.0,
+        37000.0,
+        1555.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-SYD",
+      "direction": "inbound",
+      "date": "2024-10",
+      "duration": "gs470"
+    },
+    "southernmost": {
+      "lat": -61.830213803296466,
+      "lon": -139.7384464513105,
+      "t_min": 390.0
+    },
+    "distance_km": 11362.612623868306,
+    "warnings": []
+  },
+  "SCL-SYD_in_FL370_gs470_2026-08_E_ICRP103_dt5": {
+    "label": "Trayectoria geodésica sintética; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "YSSY",
+      "destination": "SCEL",
+      "profile": "FL370",
+      "airborne_min": 783,
+      "departure_utc": "2026-08-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 11362.612623868292,
+      "path_distance_km": 11362.612623868292,
+      "n_via_waypoints": 0,
+      "ground_speed_kt": 470.13946293406696,
+      "profile_knots_min": [
+        0.0,
+        30.0,
+        751.0,
+        783.0
+      ],
+      "profile_knots_alt_ft": [
+        21.0,
+        37000.0,
+        37000.0,
+        1555.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-SYD",
+      "direction": "inbound",
+      "date": "2026-08",
+      "duration": "gs470"
+    },
+    "southernmost": {
+      "lat": -61.830213803296466,
+      "lon": -139.7384464513105,
+      "t_min": 390.0
+    },
+    "distance_km": 11362.612623868306,
+    "warnings": []
+  },
+  "SCL-SYD_in_FL410_gs470_2020-02_E_ICRP103_dt5": {
+    "label": "Trayectoria geodésica sintética; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "YSSY",
+      "destination": "SCEL",
+      "profile": "FL410",
+      "airborne_min": 783,
+      "departure_utc": "2020-02-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 11362.612623868292,
+      "path_distance_km": 11362.612623868292,
+      "n_via_waypoints": 0,
+      "ground_speed_kt": 470.13946293406696,
+      "profile_knots_min": [
+        0.0,
+        38.0,
+        748.0,
+        783.0
+      ],
+      "profile_knots_alt_ft": [
+        21.0,
+        41000.0,
+        41000.0,
+        1555.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-SYD",
+      "direction": "inbound",
+      "date": "2020-02",
+      "duration": "gs470"
+    },
+    "southernmost": {
+      "lat": -61.830213803296466,
+      "lon": -139.7384464513105,
+      "t_min": 390.0
+    },
+    "distance_km": 11362.612623868308,
+    "warnings": []
+  },
+  "SCL-SYD_in_FL410_gs470_2024-10_E_ICRP103_dt5": {
+    "label": "Trayectoria geodésica sintética; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "YSSY",
+      "destination": "SCEL",
+      "profile": "FL410",
+      "airborne_min": 783,
+      "departure_utc": "2024-10-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 11362.612623868292,
+      "path_distance_km": 11362.612623868292,
+      "n_via_waypoints": 0,
+      "ground_speed_kt": 470.13946293406696,
+      "profile_knots_min": [
+        0.0,
+        38.0,
+        748.0,
+        783.0
+      ],
+      "profile_knots_alt_ft": [
+        21.0,
+        41000.0,
+        41000.0,
+        1555.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-SYD",
+      "direction": "inbound",
+      "date": "2024-10",
+      "duration": "gs470"
+    },
+    "southernmost": {
+      "lat": -61.830213803296466,
+      "lon": -139.7384464513105,
+      "t_min": 390.0
+    },
+    "distance_km": 11362.612623868308,
+    "warnings": []
+  },
+  "SCL-SYD_in_FL410_gs470_2026-08_E_ICRP103_dt5": {
+    "label": "Trayectoria geodésica sintética; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "YSSY",
+      "destination": "SCEL",
+      "profile": "FL410",
+      "airborne_min": 783,
+      "departure_utc": "2026-08-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 11362.612623868292,
+      "path_distance_km": 11362.612623868292,
+      "n_via_waypoints": 0,
+      "ground_speed_kt": 470.13946293406696,
+      "profile_knots_min": [
+        0.0,
+        38.0,
+        748.0,
+        783.0
+      ],
+      "profile_knots_alt_ft": [
+        21.0,
+        41000.0,
+        41000.0,
+        1555.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-SYD",
+      "direction": "inbound",
+      "date": "2026-08",
+      "duration": "gs470"
+    },
+    "southernmost": {
+      "lat": -61.830213803296466,
+      "lon": -139.7384464513105,
+      "t_min": 390.0
+    },
+    "distance_km": 11362.612623868308,
+    "warnings": []
+  },
+  "SCL-SYD-FR24_in_FL330_gs470_2020-02_E_ICRP103_dt5": {
+    "label": "Trayectoria sintética por waypoints aproximados; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "YSSY",
+      "destination": "SCEL",
+      "profile": "FL330",
+      "airborne_min": 825,
+      "departure_utc": "2020-02-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 11362.612623868292,
+      "path_distance_km": 11962.328112840802,
+      "n_via_waypoints": 79,
+      "ground_speed_kt": 469.7556690689496,
+      "profile_knots_min": [
+        0.0,
+        25.0,
+        795.0,
+        825.0
+      ],
+      "profile_knots_alt_ft": [
+        21.0,
+        33000.0,
+        33000.0,
+        1555.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-SYD-FR24",
+      "direction": "inbound",
+      "date": "2020-02",
+      "duration": "gs470"
+    },
+    "southernmost": {
+      "lat": -72.14470007333448,
+      "lon": -163.85954565802106,
+      "t_min": 365.0
+    },
+    "distance_km": 11954.59069330084,
+    "warnings": []
+  },
+  "SCL-SYD-FR24_in_FL330_gs470_2024-10_E_ICRP103_dt5": {
+    "label": "Trayectoria sintética por waypoints aproximados; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "YSSY",
+      "destination": "SCEL",
+      "profile": "FL330",
+      "airborne_min": 825,
+      "departure_utc": "2024-10-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 11362.612623868292,
+      "path_distance_km": 11962.328112840802,
+      "n_via_waypoints": 79,
+      "ground_speed_kt": 469.7556690689496,
+      "profile_knots_min": [
+        0.0,
+        25.0,
+        795.0,
+        825.0
+      ],
+      "profile_knots_alt_ft": [
+        21.0,
+        33000.0,
+        33000.0,
+        1555.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-SYD-FR24",
+      "direction": "inbound",
+      "date": "2024-10",
+      "duration": "gs470"
+    },
+    "southernmost": {
+      "lat": -72.14470007333448,
+      "lon": -163.85954565802106,
+      "t_min": 365.0
+    },
+    "distance_km": 11954.59069330084,
+    "warnings": []
+  },
+  "SCL-SYD-FR24_in_FL330_gs470_2026-08_E_ICRP103_dt5": {
+    "label": "Trayectoria sintética por waypoints aproximados; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "YSSY",
+      "destination": "SCEL",
+      "profile": "FL330",
+      "airborne_min": 825,
+      "departure_utc": "2026-08-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 11362.612623868292,
+      "path_distance_km": 11962.328112840802,
+      "n_via_waypoints": 79,
+      "ground_speed_kt": 469.7556690689496,
+      "profile_knots_min": [
+        0.0,
+        25.0,
+        795.0,
+        825.0
+      ],
+      "profile_knots_alt_ft": [
+        21.0,
+        33000.0,
+        33000.0,
+        1555.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-SYD-FR24",
+      "direction": "inbound",
+      "date": "2026-08",
+      "duration": "gs470"
+    },
+    "southernmost": {
+      "lat": -72.14470007333448,
+      "lon": -163.85954565802106,
+      "t_min": 365.0
+    },
+    "distance_km": 11954.59069330084,
+    "warnings": []
+  },
+  "SCL-SYD-FR24_in_FL370_gs470_2020-02_E_ICRP103_dt5": {
+    "label": "Trayectoria sintética por waypoints aproximados; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "YSSY",
+      "destination": "SCEL",
+      "profile": "FL370",
+      "airborne_min": 825,
+      "departure_utc": "2020-02-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 11362.612623868292,
+      "path_distance_km": 11962.328112840802,
+      "n_via_waypoints": 79,
+      "ground_speed_kt": 469.7556690689496,
+      "profile_knots_min": [
+        0.0,
+        30.0,
+        793.0,
+        825.0
+      ],
+      "profile_knots_alt_ft": [
+        21.0,
+        37000.0,
+        37000.0,
+        1555.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-SYD-FR24",
+      "direction": "inbound",
+      "date": "2020-02",
+      "duration": "gs470"
+    },
+    "southernmost": {
+      "lat": -72.14470007333448,
+      "lon": -163.85954565802106,
+      "t_min": 365.0
+    },
+    "distance_km": 11954.59069330084,
+    "warnings": []
+  },
+  "SCL-SYD-FR24_in_FL370_gs470_2024-10_E_ICRP103_dt5": {
+    "label": "Trayectoria sintética por waypoints aproximados; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "YSSY",
+      "destination": "SCEL",
+      "profile": "FL370",
+      "airborne_min": 825,
+      "departure_utc": "2024-10-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 11362.612623868292,
+      "path_distance_km": 11962.328112840802,
+      "n_via_waypoints": 79,
+      "ground_speed_kt": 469.7556690689496,
+      "profile_knots_min": [
+        0.0,
+        30.0,
+        793.0,
+        825.0
+      ],
+      "profile_knots_alt_ft": [
+        21.0,
+        37000.0,
+        37000.0,
+        1555.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-SYD-FR24",
+      "direction": "inbound",
+      "date": "2024-10",
+      "duration": "gs470"
+    },
+    "southernmost": {
+      "lat": -72.14470007333448,
+      "lon": -163.85954565802106,
+      "t_min": 365.0
+    },
+    "distance_km": 11954.59069330084,
+    "warnings": []
+  },
+  "SCL-SYD-FR24_in_FL370_gs470_2026-08_E_ICRP103_dt5": {
+    "label": "Trayectoria sintética por waypoints aproximados; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "YSSY",
+      "destination": "SCEL",
+      "profile": "FL370",
+      "airborne_min": 825,
+      "departure_utc": "2026-08-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 11362.612623868292,
+      "path_distance_km": 11962.328112840802,
+      "n_via_waypoints": 79,
+      "ground_speed_kt": 469.7556690689496,
+      "profile_knots_min": [
+        0.0,
+        30.0,
+        793.0,
+        825.0
+      ],
+      "profile_knots_alt_ft": [
+        21.0,
+        37000.0,
+        37000.0,
+        1555.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-SYD-FR24",
+      "direction": "inbound",
+      "date": "2026-08",
+      "duration": "gs470"
+    },
+    "southernmost": {
+      "lat": -72.14470007333448,
+      "lon": -163.85954565802106,
+      "t_min": 365.0
+    },
+    "distance_km": 11954.59069330084,
+    "warnings": []
+  },
+  "SCL-SYD-FR24_in_FL410_gs470_2020-02_E_ICRP103_dt5": {
+    "label": "Trayectoria sintética por waypoints aproximados; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "YSSY",
+      "destination": "SCEL",
+      "profile": "FL410",
+      "airborne_min": 825,
+      "departure_utc": "2020-02-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 11362.612623868292,
+      "path_distance_km": 11962.328112840802,
+      "n_via_waypoints": 79,
+      "ground_speed_kt": 469.7556690689496,
+      "profile_knots_min": [
+        0.0,
+        38.0,
+        790.0,
+        825.0
+      ],
+      "profile_knots_alt_ft": [
+        21.0,
+        41000.0,
+        41000.0,
+        1555.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-SYD-FR24",
+      "direction": "inbound",
+      "date": "2020-02",
+      "duration": "gs470"
+    },
+    "southernmost": {
+      "lat": -72.14470007333448,
+      "lon": -163.85954565802106,
+      "t_min": 365.0
+    },
+    "distance_km": 11954.5907034946,
+    "warnings": []
+  },
+  "SCL-SYD-FR24_in_FL410_gs470_2024-10_E_ICRP103_dt5": {
+    "label": "Trayectoria sintética por waypoints aproximados; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "YSSY",
+      "destination": "SCEL",
+      "profile": "FL410",
+      "airborne_min": 825,
+      "departure_utc": "2024-10-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 11362.612623868292,
+      "path_distance_km": 11962.328112840802,
+      "n_via_waypoints": 79,
+      "ground_speed_kt": 469.7556690689496,
+      "profile_knots_min": [
+        0.0,
+        38.0,
+        790.0,
+        825.0
+      ],
+      "profile_knots_alt_ft": [
+        21.0,
+        41000.0,
+        41000.0,
+        1555.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-SYD-FR24",
+      "direction": "inbound",
+      "date": "2024-10",
+      "duration": "gs470"
+    },
+    "southernmost": {
+      "lat": -72.14470007333448,
+      "lon": -163.85954565802106,
+      "t_min": 365.0
+    },
+    "distance_km": 11954.5907034946,
+    "warnings": []
+  },
+  "SCL-SYD-FR24_in_FL410_gs470_2026-08_E_ICRP103_dt5": {
+    "label": "Trayectoria sintética por waypoints aproximados; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "YSSY",
+      "destination": "SCEL",
+      "profile": "FL410",
+      "airborne_min": 825,
+      "departure_utc": "2026-08-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 11362.612623868292,
+      "path_distance_km": 11962.328112840802,
+      "n_via_waypoints": 79,
+      "ground_speed_kt": 469.7556690689496,
+      "profile_knots_min": [
+        0.0,
+        38.0,
+        790.0,
+        825.0
+      ],
+      "profile_knots_alt_ft": [
+        21.0,
+        41000.0,
+        41000.0,
+        1555.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-SYD-FR24",
+      "direction": "inbound",
+      "date": "2026-08",
+      "duration": "gs470"
+    },
+    "southernmost": {
+      "lat": -72.14470007333448,
+      "lon": -163.85954565802106,
+      "t_min": 365.0
+    },
+    "distance_km": 11954.5907034946,
+    "warnings": []
+  },
+  "SCL-SYD_in_FL370_igual_tiempo_2020-02_E_ICRP103_dt5": {
+    "label": "Trayectoria geodésica sintética; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "YSSY",
+      "destination": "SCEL",
+      "profile": "FL370",
+      "airborne_min": 783,
+      "departure_utc": "2020-02-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 11362.612623868292,
+      "path_distance_km": 11362.612623868292,
+      "n_via_waypoints": 0,
+      "ground_speed_kt": 470.13946293406696,
+      "profile_knots_min": [
+        0.0,
+        30.0,
+        751.0,
+        783.0
+      ],
+      "profile_knots_alt_ft": [
+        21.0,
+        37000.0,
+        37000.0,
+        1555.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-SYD",
+      "direction": "inbound",
+      "date": "2020-02",
+      "duration": "igual_tiempo"
+    },
+    "southernmost": {
+      "lat": -61.830213803296466,
+      "lon": -139.7384464513105,
+      "t_min": 390.0
+    },
+    "distance_km": 11362.612623868306,
+    "warnings": []
+  },
+  "SCL-SYD_in_FL370_igual_tiempo_2024-10_E_ICRP103_dt5": {
+    "label": "Trayectoria geodésica sintética; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "YSSY",
+      "destination": "SCEL",
+      "profile": "FL370",
+      "airborne_min": 783,
+      "departure_utc": "2024-10-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 11362.612623868292,
+      "path_distance_km": 11362.612623868292,
+      "n_via_waypoints": 0,
+      "ground_speed_kt": 470.13946293406696,
+      "profile_knots_min": [
+        0.0,
+        30.0,
+        751.0,
+        783.0
+      ],
+      "profile_knots_alt_ft": [
+        21.0,
+        37000.0,
+        37000.0,
+        1555.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-SYD",
+      "direction": "inbound",
+      "date": "2024-10",
+      "duration": "igual_tiempo"
+    },
+    "southernmost": {
+      "lat": -61.830213803296466,
+      "lon": -139.7384464513105,
+      "t_min": 390.0
+    },
+    "distance_km": 11362.612623868306,
+    "warnings": []
+  },
+  "SCL-SYD_in_FL370_igual_tiempo_2026-08_E_ICRP103_dt5": {
+    "label": "Trayectoria geodésica sintética; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "YSSY",
+      "destination": "SCEL",
+      "profile": "FL370",
+      "airborne_min": 783,
+      "departure_utc": "2026-08-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 11362.612623868292,
+      "path_distance_km": 11362.612623868292,
+      "n_via_waypoints": 0,
+      "ground_speed_kt": 470.13946293406696,
+      "profile_knots_min": [
+        0.0,
+        30.0,
+        751.0,
+        783.0
+      ],
+      "profile_knots_alt_ft": [
+        21.0,
+        37000.0,
+        37000.0,
+        1555.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-SYD",
+      "direction": "inbound",
+      "date": "2026-08",
+      "duration": "igual_tiempo"
+    },
+    "southernmost": {
+      "lat": -61.830213803296466,
+      "lon": -139.7384464513105,
+      "t_min": 390.0
+    },
+    "distance_km": 11362.612623868306,
+    "warnings": []
+  },
+  "SCL-SYD-FR24_in_FL370_igual_tiempo_2020-02_E_ICRP103_dt5": {
+    "label": "Trayectoria sintética por waypoints aproximados; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "YSSY",
+      "destination": "SCEL",
+      "profile": "FL370",
+      "airborne_min": 783,
+      "departure_utc": "2020-02-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 11362.612623868292,
+      "path_distance_km": 11962.328112840802,
+      "n_via_waypoints": 79,
+      "ground_speed_kt": 494.95329116460204,
+      "profile_knots_min": [
+        0.0,
+        30.0,
+        751.0,
+        783.0
+      ],
+      "profile_knots_alt_ft": [
+        21.0,
+        37000.0,
+        37000.0,
+        1555.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-SYD-FR24",
+      "direction": "inbound",
+      "date": "2020-02",
+      "duration": "igual_tiempo"
+    },
+    "southernmost": {
+      "lat": -72.14569686447652,
+      "lon": -164.49240832346217,
+      "t_min": 345.0
+    },
+    "distance_km": 11954.98902096338,
+    "warnings": []
+  },
+  "SCL-SYD-FR24_in_FL370_igual_tiempo_2024-10_E_ICRP103_dt5": {
+    "label": "Trayectoria sintética por waypoints aproximados; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "YSSY",
+      "destination": "SCEL",
+      "profile": "FL370",
+      "airborne_min": 783,
+      "departure_utc": "2024-10-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 11362.612623868292,
+      "path_distance_km": 11962.328112840802,
+      "n_via_waypoints": 79,
+      "ground_speed_kt": 494.95329116460204,
+      "profile_knots_min": [
+        0.0,
+        30.0,
+        751.0,
+        783.0
+      ],
+      "profile_knots_alt_ft": [
+        21.0,
+        37000.0,
+        37000.0,
+        1555.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-SYD-FR24",
+      "direction": "inbound",
+      "date": "2024-10",
+      "duration": "igual_tiempo"
+    },
+    "southernmost": {
+      "lat": -72.14569686447652,
+      "lon": -164.49240832346217,
+      "t_min": 345.0
+    },
+    "distance_km": 11954.98902096338,
+    "warnings": []
+  },
+  "SCL-SYD-FR24_in_FL370_igual_tiempo_2026-08_E_ICRP103_dt5": {
+    "label": "Trayectoria sintética por waypoints aproximados; no representa necesariamente la ruta operacional",
+    "synthetic": true,
+    "meta": {
+      "origin": "YSSY",
+      "destination": "SCEL",
+      "profile": "FL370",
+      "airborne_min": 783,
+      "departure_utc": "2026-08-15T03:00:00+00:00",
+      "sample_min": 5.0,
+      "geodesic_distance_km": 11362.612623868292,
+      "path_distance_km": 11962.328112840802,
+      "n_via_waypoints": 79,
+      "ground_speed_kt": 494.95329116460204,
+      "profile_knots_min": [
+        0.0,
+        30.0,
+        751.0,
+        783.0
+      ],
+      "profile_knots_alt_ft": [
+        21.0,
+        37000.0,
+        37000.0,
+        1555.0
+      ],
+      "assumptions": [
+        "Velocidad respecto al suelo constante a lo largo del tramo (supuesto).",
+        "Altitud lineal por tramos entre quiebres del perfil (supuesto).",
+        "Elevación del aeródromo tomada como altitud de presión ISA en origen/destino."
+      ],
+      "route": "SCL-SYD-FR24",
+      "direction": "inbound",
+      "date": "2026-08",
+      "duration": "igual_tiempo"
+    },
+    "southernmost": {
+      "lat": -72.14569686447652,
+      "lon": -164.49240832346217,
+      "t_min": 345.0
+    },
+    "distance_km": 11954.98902096338,
+    "warnings": []
+  }
+}

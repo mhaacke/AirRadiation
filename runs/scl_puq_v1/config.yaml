@@ -1,0 +1,134 @@
+# Estudio de escenarios: radiación cósmica galáctica (GCR) en la ruta doméstica Santiago–Punta Arenas.
+# Mismo motor, fechas de referencia y convenciones que config/study.yaml, para que los resultados
+# sean comparables con runs/matrix_v1. Todo lo marcado como "supuesto" es una entrada configurable.
+
+study:
+  name: scl_puq_gcr_v1
+  description: >-
+    Escenarios sintéticos SCL–PUQ (Santiago–Punta Arenas) en ambos sentidos con CARI-7.
+    Estudio de escenarios; no reconstruye vuelos reales ni es una herramienta operacional certificada.
+    Sólo fondo de radiación cósmica galáctica; los eventos de partículas solares requieren un análisis específico posterior.
+  runs_dir: runs
+  sampling_min: 5
+  departure_day: 15
+  departure_time_utc: "03:00"
+
+engine:
+  name: cari7
+  install_dir: third_party/cari7/CARI_7_DVD
+  executable: cari-7_linux_intel_exe
+  runner: docker
+  docker_image: debian@sha256:7ff6ba31527b9e336162fa061746c366c4b2032f4d2cff2078bea43f78efe3f8  # debian:bookworm-slim
+  docker_platform: linux/amd64
+  max_parallel: 4
+  timeout_s: 21600
+
+airports_dir: data/airports
+
+routes:
+  SCL-PUQ: {a: SCEL, b: SCCI}
+
+# outbound: SCL -> PUQ (hacia el sur); inbound: PUQ -> SCL
+directions: [outbound, inbound]
+
+profiles:
+  FL330:
+    type: constant
+    cruise_fl: 330
+    climb_min: 25
+    descent_min: 30
+    note: "Supuesto: crucero constante FL330 con ascenso/descenso lineales (igual que config/study.yaml)."
+  FL370:
+    type: constant
+    cruise_fl: 370
+    climb_min: 30
+    descent_min: 32
+    note: "Supuesto: crucero constante FL370 con ascenso/descenso lineales (igual que config/study.yaml)."
+  FL390:
+    type: constant
+    cruise_fl: 390
+    climb_min: 34
+    descent_min: 33
+    note: >-
+      Supuesto: crucero constante FL390. Cota superior hipotética para un fuselaje angosto
+      (techo certificado de la familia A320 ≈ FL390–FL398); no es un perfil operacional validado.
+
+durations:
+  gs470:
+    description: >-
+      Supuesto: tiempo en el aire = distancia geodésica / 470 kt, igual que en config/study.yaml
+      (comparabilidad). No es un horario comercial ni un tiempo en el aire real.
+    ground_speed_kt: 470
+  gs400:
+    description: >-
+      Supuesto de sensibilidad: 400 kt de velocidad media respecto al suelo (tramo corto, donde ascenso y
+      descenso pesan más). Elegido a mano; no derivado de datos operacionales ni meteorológicos.
+    ground_speed_kt: 400
+
+dates:
+  "2020-02":
+    year: 2020
+    month: 2
+    label: "baja modulación solar (feb-2020)"
+    justification: >-
+      Igual que config/study.yaml: 254 MV en SOLARMOD/MV-DATES.L99; mínimo del ciclo 24/25.
+  "2024-10":
+    year: 2024
+    month: 10
+    label: "alta modulación solar (oct-2024)"
+    justification: >-
+      Igual que config/study.yaml: 1040 MV en MV-DATES.L99; máximo del ciclo 25.
+  "2026-08":
+    year: 2026
+    month: 8
+    label: "último mes disponible (ago-2026)"
+    justification: >-
+      Último potencial heliocéntrico mensual del paquete instalado (MV-DATES.L99: 642 MV). Condición
+      reciente de referencia, no una predicción.
+  # Las tres fechas son posteriores a 2010: CARI-7 usa la rejilla IGRF2010 en todas.
+
+matrix:
+  - block: principal
+    routes: [SCL-PUQ]
+    directions: [outbound, inbound]
+    profiles: [FL330, FL370, FL390]
+    durations: [gs470]
+    dates: ["2020-02", "2024-10", "2026-08"]
+    quantities: [E_ICRP103]
+  - block: sensibilidad_duracion
+    routes: [SCL-PUQ]
+    directions: [outbound, inbound]
+    profiles: [FL370]
+    durations: [gs400]
+    dates: ["2020-02", "2024-10", "2026-08"]
+    quantities: [E_ICRP103]
+  - block: convergencia
+    routes: [SCL-PUQ]
+    directions: [outbound]
+    profiles: [FL370]
+    durations: [gs470]
+    dates: ["2020-02"]
+    quantities: [E_ICRP103]
+    sampling_min: [5, 2, 1]
+  - block: magnitudes
+    routes: [SCL-PUQ]
+    directions: [outbound]
+    profiles: [FL370]
+    durations: [gs470]
+    dates: ["2020-02", "2024-10", "2026-08"]
+    quantities: [E_ICRP103, H10, D_WB]
+
+imported_tracks: []
+
+report:
+  rate_altitude_profiles: [FL330, FL370, FL390]
+
+annual:
+  note: >-
+    Aproximación: repite la dosis de un tramo representativo; no equivale a simular las condiciones
+    solares de cada vuelo del año. Un tramo es un vuelo de ida o de vuelta, no una rotación completa.
+    Los calendarios son hipotéticos y no se afirma que cumplan límites laborales u operacionales.
+  months: 12
+  legs_per_month: [10, 20, 30]
+  representative: {profile: FL370, duration: gs470}
+  mixed_calendars: []

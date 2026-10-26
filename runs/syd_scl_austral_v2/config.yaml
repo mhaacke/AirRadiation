@@ -1,0 +1,179 @@
+# Estudio de escenarios: efecto de una ruta más austral que la geodésica en SYD→SCL (GCR, CARI-7).
+# Mismo motor, perfiles y fechas que config/study.yaml, para comparar con runs/matrix_v1.
+# Todo lo marcado como "supuesto" es una entrada configurable, no un dato operacional.
+
+study:
+  name: syd_scl_austral_v1
+  description: >-
+    Sensibilidad a la trayectoria: SYD→SCL por la geodésica frente a una ruta austral (~72° S)
+    digitalizada de una captura de Flightradar24 (vuelo rotulado LA809) con CARI-7.
+    Estudio de escenarios; no reconstruye vuelos reales ni es una herramienta operacional certificada.
+    Sólo fondo de radiación cósmica galáctica; los eventos de partículas solares requieren un análisis específico posterior.
+  runs_dir: runs
+  sampling_min: 5            # muestreo de waypoints de la trayectoria (min); CARI integra internamente a 1 min
+  departure_day: 15          # día y hora de salida: sólo etiquetan timestamps; CARI usa el promedio mensual
+  departure_time_utc: "03:00"
+
+engine:
+  name: cari7
+  install_dir: third_party/cari7/CARI_7_DVD
+  executable: cari-7_linux_intel_exe
+  runner: docker             # docker (host no x86-64) | native (Linux x86-64)
+  docker_image: debian@sha256:7ff6ba31527b9e336162fa061746c366c4b2032f4d2cff2078bea43f78efe3f8  # debian:bookworm-slim
+  docker_platform: linux/amd64
+  max_parallel: 10
+  timeout_s: 21600
+
+airports_dir: data/airports  # OurAirports, ver data/airports/provenance.json
+
+routes:
+  SCL-SYD: {a: SCEL, b: YSSY}
+  SCL-SYD-FR24:
+    a: SCEL
+    b: YSSY
+    via: {path: data/tracks/SYD-SCL_fr24_LA809_digitized.csv, order: b_to_a}
+    note: >-
+      Waypoints aproximados digitalizados de una captura de Flightradar24 (ver el .provenance.json).
+      Un solo vuelo SYD→SCL de fecha desconocida; el tramo más austral es una estimación de FR24.
+
+# Sólo inbound (SYD→SCL): es el sentido del vuelo observado. El sentido contrario se planifica con otros vientos.
+directions: [inbound]
+
+profiles:
+  FL330:
+    type: constant
+    cruise_fl: 330
+    climb_min: 25
+    descent_min: 30
+    note: "Supuesto: crucero constante FL330 con ascenso/descenso lineales."
+  FL370:
+    type: constant
+    cruise_fl: 370
+    climb_min: 30
+    descent_min: 32
+    note: "Supuesto: crucero constante FL370 con ascenso/descenso lineales."
+  FL410:
+    type: constant
+    cruise_fl: 410
+    climb_min: 38
+    descent_min: 35
+    note: >-
+      Supuesto: crucero constante FL410. Cota superior hipotética; muchos aviones de largo alcance
+      no pueden iniciar el crucero a FL410 con peso de despegue alto.
+  STEP330-390:
+    type: step
+    levels_fl: [330, 350, 370, 390]
+    cruise_fractions: [0.25, 0.25, 0.25, 0.25]   # fracción del tiempo nivelado en cada escalón
+    step_climb_fpm: 1000                         # régimen de cada ascenso escalonado
+    climb_min: 25
+    descent_min: 32
+    note: "Supuesto configurable de crucero escalonado; no es un perfil operacional validado."
+
+durations:
+  gs470:
+    description: >-
+      Supuesto: tiempo en el aire = longitud de la trayectoria / 470 kt. La ruta austral es un 5.3 % más
+      larga, así que también dura un 5.3 % más (825 frente a 783 min). No es un tiempo real en el aire.
+    ground_speed_kt: 470
+  igual_tiempo:
+    description: >-
+      Supuesto: ambas trayectorias en 783 min (geodésica a 470 kt). Representa el caso en que el viento
+      favorable de la ruta austral compensa su mayor longitud; aísla el efecto de la latitud del de la duración.
+      Elegido a mano, no derivado de datos meteorológicos.
+    airborne_min:
+      SCL-SYD: {inbound: 783}
+      SCL-SYD-FR24: {inbound: 783}
+
+dates:
+  "2020-02":
+    year: 2020
+    month: 2
+    label: "baja modulación solar (feb-2020)"
+    justification: >-
+      Potencial heliocéntrico mensual en SOLARMOD/MV-DATES.L99 de CARI-7: 254 MV (entre los más bajos
+      desde 2010). Número de manchas SILSO V2.0 suavizado a 13 meses: 2.7 (mínimo del ciclo 24/25 en
+      dic-2019, 1.8).
+  "2024-10":
+    year: 2024
+    month: 10
+    label: "alta modulación solar (oct-2024)"
+    justification: >-
+      Potencial heliocéntrico mensual en MV-DATES.L99: 1040 MV. Número de manchas SILSO V2.0
+      suavizado a 13 meses: 160.9, máximo del ciclo 25.
+  "2026-08":
+    year: 2026
+    month: 8
+    label: "último mes disponible (ago-2026)"
+    justification: >-
+      Último potencial heliocéntrico mensual del paquete instalado (MV-DATES.L99: 642 MV). Condición
+      reciente de referencia, no una predicción.
+  # Las fechas son posteriores a 2010: CARI-7 usa la misma rejilla de rigidez de corte (IGRF2010),
+  # por lo que la diferencia entre fechas refleja la modulación solar del fondo galáctico en el modelo.
+
+matrix:
+  - block: principal
+    routes: [SCL-SYD, SCL-SYD-FR24]
+    directions: [inbound]
+    profiles: [FL330, FL370, FL410]
+    durations: [gs470]
+    dates: ["2020-02", "2024-10", "2026-08"]
+    quantities: [E_ICRP103]
+  - block: igual_tiempo
+    routes: [SCL-SYD, SCL-SYD-FR24]
+    directions: [inbound]
+    profiles: [FL370]
+    durations: [igual_tiempo]
+    dates: ["2020-02", "2024-10", "2026-08"]
+    quantities: [E_ICRP103]
+
+  - block: ida_geodesica
+    # Tramo de ida SCL->SYD (geodésica) para armar rotaciones en los calendarios anuales. No hay traza
+    # observada de la ida: no se supone que la ida siga la ruta austral.
+    routes: [SCL-SYD]
+    directions: [outbound]
+    profiles: [FL370]
+    durations: [gs470]
+    dates: ["2020-02", "2024-10", "2026-08"]
+    quantities: [E_ICRP103]
+
+imported_tracks: []
+
+report:
+  reference_route: SCL-SYD
+  rate_altitude_profiles: [FL330, FL370, FL410]
+
+annual:
+  note: >-
+    Aproximación: repite la dosis de un tramo representativo; no equivale a simular las condiciones
+    solares de cada vuelo del año. Una rotación son dos tramos: ida SCL->SYD por la geodésica (la
+    única calculada en ese sentido) y vuelta SYD->SCL por la geodésica o por la ruta austral digitalizada
+    de un solo vuelo. Los calendarios son hipotéticos y no se afirma que cumplan límites laborales u
+    operacionales.
+  months: 12
+  legs_per_month: []   # el promedio de ambos sentidos no aplica: la ruta austral sólo tiene vuelta
+  representative: {profile: FL370, duration: gs470}
+  mixed_calendars:
+    - name: "1 rot/mes, vuelta geodésica"
+      kind: rotación geodésica
+      legs_per_month: {SCL-SYD outbound: 1, SCL-SYD inbound: 1}
+    - name: "1 rot/mes, vuelta austral"
+      kind: rotación austral
+      legs_per_month: {SCL-SYD outbound: 1, SCL-SYD-FR24 inbound: 1}
+    - name: "2 rot/mes, vuelta geodésica"
+      kind: rotación geodésica
+      legs_per_month: {SCL-SYD outbound: 2, SCL-SYD inbound: 2}
+    - name: "2 rot/mes, vuelta austral"
+      kind: rotación austral
+      legs_per_month: {SCL-SYD outbound: 2, SCL-SYD-FR24 inbound: 2}
+    - name: "3 rot/mes, vuelta geodésica"
+      kind: rotación geodésica
+      legs_per_month: {SCL-SYD outbound: 3, SCL-SYD inbound: 3}
+    - name: "3 rot/mes, vuelta austral"
+      kind: rotación austral
+      legs_per_month: {SCL-SYD outbound: 3, SCL-SYD-FR24 inbound: 3}
+    - name: "4 rot/mes, vuelta geodésica"
+      kind: rotación geodésica
+      legs_per_month: {SCL-SYD outbound: 4, SCL-SYD inbound: 4}
+    - name: "4 rot/mes, vuelta austral"
+      kind: rotación austral
+      legs_per_month: {SCL-SYD outbound: 4, SCL-SYD-FR24 inbound: 4}

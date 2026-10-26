@@ -1,0 +1,770 @@
+{
+  "run_id": "scl_puq_v1",
+  "purpose": "Escenarios sintéticos SCL–PUQ (Santiago–Punta Arenas) en ambos sentidos con CARI-7. Estudio de escenarios; no reconstruye vuelos reales ni es una herramienta operacional certificada. Sólo fondo de radiación cósmica galáctica; los eventos de partículas solares requieren un análisis específico posterior.",
+  "config_file": "config/scl_puq.yaml",
+  "config_sha256": "ca028fc4cfbc07c938b5c877dbc31e51de23847e88510dc504c21ce44f70105a",
+  "config": {
+    "study": {
+      "name": "scl_puq_gcr_v1",
+      "description": "Escenarios sintéticos SCL–PUQ (Santiago–Punta Arenas) en ambos sentidos con CARI-7. Estudio de escenarios; no reconstruye vuelos reales ni es una herramienta operacional certificada. Sólo fondo de radiación cósmica galáctica; los eventos de partículas solares requieren un análisis específico posterior.",
+      "runs_dir": "runs",
+      "sampling_min": 5,
+      "departure_day": 15,
+      "departure_time_utc": "03:00"
+    },
+    "engine": {
+      "name": "cari7",
+      "install_dir": "third_party/cari7/CARI_7_DVD",
+      "executable": "cari-7_linux_intel_exe",
+      "runner": "docker",
+      "docker_image": "debian@sha256:7ff6ba31527b9e336162fa061746c366c4b2032f4d2cff2078bea43f78efe3f8",
+      "docker_platform": "linux/amd64",
+      "max_parallel": 4,
+      "timeout_s": 21600
+    },
+    "airports_dir": "data/airports",
+    "routes": {
+      "SCL-PUQ": {
+        "a": "SCEL",
+        "b": "SCCI"
+      }
+    },
+    "directions": [
+      "outbound",
+      "inbound"
+    ],
+    "profiles": {
+      "FL330": {
+        "type": "constant",
+        "cruise_fl": 330,
+        "climb_min": 25,
+        "descent_min": 30,
+        "note": "Supuesto: crucero constante FL330 con ascenso/descenso lineales (igual que config/study.yaml)."
+      },
+      "FL370": {
+        "type": "constant",
+        "cruise_fl": 370,
+        "climb_min": 30,
+        "descent_min": 32,
+        "note": "Supuesto: crucero constante FL370 con ascenso/descenso lineales (igual que config/study.yaml)."
+      },
+      "FL390": {
+        "type": "constant",
+        "cruise_fl": 390,
+        "climb_min": 34,
+        "descent_min": 33,
+        "note": "Supuesto: crucero constante FL390. Cota superior hipotética para un fuselaje angosto (techo certificado de la familia A320 ≈ FL390–FL398); no es un perfil operacional validado."
+      }
+    },
+    "durations": {
+      "gs470": {
+        "description": "Supuesto: tiempo en el aire = distancia geodésica / 470 kt, igual que en config/study.yaml (comparabilidad). No es un horario comercial ni un tiempo en el aire real.",
+        "ground_speed_kt": 470
+      },
+      "gs400": {
+        "description": "Supuesto de sensibilidad: 400 kt de velocidad media respecto al suelo (tramo corto, donde ascenso y descenso pesan más). Elegido a mano; no derivado de datos operacionales ni meteorológicos.",
+        "ground_speed_kt": 400
+      }
+    },
+    "dates": {
+      "2020-02": {
+        "year": 2020,
+        "month": 2,
+        "label": "baja modulación solar (feb-2020)",
+        "justification": "Igual que config/study.yaml: 254 MV en SOLARMOD/MV-DATES.L99; mínimo del ciclo 24/25."
+      },
+      "2024-10": {
+        "year": 2024,
+        "month": 10,
+        "label": "alta modulación solar (oct-2024)",
+        "justification": "Igual que config/study.yaml: 1040 MV en MV-DATES.L99; máximo del ciclo 25."
+      },
+      "2026-08": {
+        "year": 2026,
+        "month": 8,
+        "label": "último mes disponible (ago-2026)",
+        "justification": "Último potencial heliocéntrico mensual del paquete instalado (MV-DATES.L99: 642 MV). Condición reciente de referencia, no una predicción."
+      }
+    },
+    "matrix": [
+      {
+        "block": "principal",
+        "routes": [
+          "SCL-PUQ"
+        ],
+        "directions": [
+          "outbound",
+          "inbound"
+        ],
+        "profiles": [
+          "FL330",
+          "FL370",
+          "FL390"
+        ],
+        "durations": [
+          "gs470"
+        ],
+        "dates": [
+          "2020-02",
+          "2024-10",
+          "2026-08"
+        ],
+        "quantities": [
+          "E_ICRP103"
+        ]
+      },
+      {
+        "block": "sensibilidad_duracion",
+        "routes": [
+          "SCL-PUQ"
+        ],
+        "directions": [
+          "outbound",
+          "inbound"
+        ],
+        "profiles": [
+          "FL370"
+        ],
+        "durations": [
+          "gs400"
+        ],
+        "dates": [
+          "2020-02",
+          "2024-10",
+          "2026-08"
+        ],
+        "quantities": [
+          "E_ICRP103"
+        ]
+      },
+      {
+        "block": "convergencia",
+        "routes": [
+          "SCL-PUQ"
+        ],
+        "directions": [
+          "outbound"
+        ],
+        "profiles": [
+          "FL370"
+        ],
+        "durations": [
+          "gs470"
+        ],
+        "dates": [
+          "2020-02"
+        ],
+        "quantities": [
+          "E_ICRP103"
+        ],
+        "sampling_min": [
+          5,
+          2,
+          1
+        ]
+      },
+      {
+        "block": "magnitudes",
+        "routes": [
+          "SCL-PUQ"
+        ],
+        "directions": [
+          "outbound"
+        ],
+        "profiles": [
+          "FL370"
+        ],
+        "durations": [
+          "gs470"
+        ],
+        "dates": [
+          "2020-02",
+          "2024-10",
+          "2026-08"
+        ],
+        "quantities": [
+          "E_ICRP103",
+          "H10",
+          "D_WB"
+        ]
+      }
+    ],
+    "imported_tracks": [],
+    "report": {
+      "rate_altitude_profiles": [
+        "FL330",
+        "FL370",
+        "FL390"
+      ]
+    },
+    "annual": {
+      "note": "Aproximación: repite la dosis de un tramo representativo; no equivale a simular las condiciones solares de cada vuelo del año. Un tramo es un vuelo de ida o de vuelta, no una rotación completa. Los calendarios son hipotéticos y no se afirma que cumplan límites laborales u operacionales.",
+      "months": 12,
+      "legs_per_month": [
+        10,
+        20,
+        30
+      ],
+      "representative": {
+        "profile": "FL370",
+        "duration": "gs470"
+      },
+      "mixed_calendars": []
+    }
+  },
+  "n_scenarios": 32,
+  "selection": {
+    "blocks": null,
+    "contains": null
+  },
+  "airports_provenance": {
+    "source": "OurAirports",
+    "url": "https://davidmegginson.github.io/ourairports-data/airports.csv",
+    "license": "Public Domain (\"All data is released to the Public Domain\")",
+    "license_url": "https://ourairports.com/data/",
+    "retrieved_utc": "2026-10-25T21:25:13+00:00",
+    "source_file_sha256": "fe7f0d9dc2646e41b0cc520f1733d99b9c76a6b26a3e6a55f66fa89e62083ad5",
+    "datum": "WGS84 (geographic coordinates, decimal degrees)",
+    "elevation": "field elevation in feet above mean sea level",
+    "icao": [
+      "SCEL",
+      "YMML",
+      "YSSY",
+      "NZAA",
+      "SCCI"
+    ]
+  },
+  "cari_install_provenance": {
+    "package_url": "https://www.faa.gov/sites/faa.gov/files/data_research/research/med_humanfacs/aeromedical/cari_7exe.zip",
+    "documentation_page": "https://www.faa.gov/data_research/research/med_humanfacs/aeromedical/radiobiology/cari7",
+    "package_sha256": "a20d9ca8aec142337be52632fbe6f251545d771bdfc0e6bbb69e7a4ddfc94197",
+    "matches_study_package": true,
+    "installed_utc": "2026-10-25T17:42:21+00:00",
+    "linux_executable": "CARI_7_DVD/cari-7_linux_intel_exe",
+    "linux_executable_sha256": "adc60bf82bff4ab6832cb8eb2ee2d0e11967cbe0b81eac54ccf8ecb23a78019b",
+    "terms": "Software y documentación difundidos por el U.S. DOT/FAA 'in the interest of information exchange'; el Gobierno de EE.UU. no asume responsabilidad (HELP.TXT). El paquete no declara una licencia de redistribución para binarios y datos, por lo que este repositorio no los incluye."
+  },
+  "git": {
+    "commit": "ece5c2518b1a1eb4304cec3736eed832bf0d033e",
+    "dirty": true,
+    "source_tree_sha256": "7b665124147d29fbb7c997c54e4f79bafcc38ab65506110cca3f8394c38560fe"
+  },
+  "environment": {
+    "python": "3.13.16 (main, Oct 14 2026, 00:55:38) [Clang 23.1.3 ]",
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "packages": {
+      "numpy": "2.5.4",
+      "pandas": "3.1.0",
+      "pyproj": "3.8.0",
+      "matplotlib": "3.11.2",
+      "cartopy": "0.26.0",
+      "pyyaml": "6.0.3"
+    },
+    "uv_lock_sha256": "e0c1cbbcf7107026c1142f7b526836fb362961acee943ae3a7ab4d5c6811214b"
+  },
+  "sources": [
+    {
+      "what": "CARI-7 (programa, datos y documentación)",
+      "url": "https://www.faa.gov/data_research/research/med_humanfacs/aeromedical/radiobiology/cari7"
+    },
+    {
+      "what": "CARI-7 User's Guide, DOT/FAA/AM-21/6 (Copeland 2021)",
+      "url": "https://www.faa.gov/sites/faa.gov/files/data_research/research/med_humanfacs/aeromedical/202106.pdf"
+    },
+    {
+      "what": "CARI-7 Radiation Transport in the Atmosphere, DOT/FAA/AM-21/5",
+      "url": "https://www.faa.gov/sites/faa.gov/files/data_research/research/med_humanfacs/aeromedical/202105.pdf"
+    },
+    {
+      "what": "CARI-7 Geomagnetic Cutoff Rigidity Calculations and Tables for 1965-2010, DOT/FAA/AM-19/4",
+      "url": "https://www.faa.gov/sites/faa.gov/files/data_research/research/med_humanfacs/aeromedical/201904.pdf"
+    },
+    {
+      "what": "Coordenadas de aeropuertos: OurAirports (dominio público)",
+      "url": "https://ourairports.com/data/"
+    },
+    {
+      "what": "SILSO, Royal Observatory of Belgium: número de manchas mensual y suavizado V2.0 (justificación de fechas)",
+      "url": "https://www.sidc.be/SILSO/datafiles"
+    }
+  ],
+  "assumptions": [
+    "Sólo radiación cósmica galáctica (GCR). Eventos de partículas solares (SPE/GLE) fuera del alcance.",
+    "Condiciones promedio mensuales de CARI-7 (día=00): sin ajustes horarios por decrecimientos Forbush ni Kp.",
+    "Trayectorias geodésicas sintéticas WGS84; no representan rutas operacionales (vientos, ETOPS, ATC).",
+    "Perfiles verticales, duraciones y velocidades son supuestos configurables, no datos de vuelos reales.",
+    "Altitudes de perfil = altitud de presión ISA (FL x 100 ft), que CARI interpreta como altitud geopotencial de la Atmósfera Estándar EE.UU. 1976.",
+    "Sin blindaje del fuselaje (práctica habitual; CARI-7 no lo modela).",
+    "Sin multiplicadores ad hoc (Anomalía del Atlántico Sur, polo, 'ruta polar'): el blindaje geomagnético lo representa CARI mediante rigideces de corte.",
+    "CARI-7 usa la rejilla de rigidez de corte IGRF2010 para fechas >= 2010 (sin variación secular posterior)."
+  ],
+  "started_utc": "2026-10-25T21:25:40+00:00",
+  "engine": {
+    "engine": "CARI-7",
+    "executable": "cari-7_linux_intel_exe",
+    "executable_sha256": "adc60bf82bff4ab6832cb8eb2ee2d0e11967cbe0b81eac54ccf8ecb23a78019b",
+    "executable_size": 1515748,
+    "executable_arch": "x86-64",
+    "embedded_banner": "June 24, 2020 (4.1.2)",
+    "fixed_model_options": {
+      "gcr_model": "4 = ISO 2004 LIS modulado por potencial heliocéntrico CARI-6 (forzado en CARI-7)",
+      "superposition": "0 (forzado en CARI-7)",
+      "nvcr": "0 = rigidez de corte aparente ajustada por altitud, flujo isótropo (forzado)",
+      "cutoff_grids": "WGRC1965, IGRF1980, DGRF1990, IGRF1995, IGRF2000, IGRF2010; desde 2010 se usa IGRF2010 sin extrapolar",
+      "atmosphere": "U.S. Standard Atmosphere 1976 (ATMOSPHERE/FT-GM.DAT)",
+      "vehicle_shielding": "ninguno"
+    },
+    "data_tree_sha256": {
+      "AIRPORTS": "7dde43df418ec20ef9b4b59ef91202aa34900f28d61f8a529e5c3e4f0e4ea151",
+      "ATMOSPHERE": "d12e4497120ce0dc833fdbe6e5ba1c58c90bff8a1e09fc263fa7954a82458c70",
+      "DIAGNOSE": "bbf3af48811b784f7b3fb3321a94483dde8f2980af3b7243705580db0f469b06",
+      "GCR_MODELS": "10364023031e5557c2c00af05e822b74099247e0a0afdb8699d06c0630ba8cb3",
+      "SOLARMOD": "d5975f3d32c9bfee9cc2f1f4f5ac7899d4d31485b3f97e84ce7abf3f41fdf60c",
+      "CUTOFFS": "a45dcc03d3afbe1eaf1caf849a547529a4a747dfeec905c7bc859b0289431cb5",
+      "FORBUSH": "772e3eb3164ceafadd46421e8362507a94ed6b048e1ddae92242ec93385622f4",
+      "KP_INDEX": "ffece289ed9d0654ce4a89168d337010aedfd2a894d2de0ad7dd7e1eff32a193",
+      "SHOWERS": "faa9a8d4bc1128c441d62f53cf35319333c74824fbda2904912b5f929201b670"
+    },
+    "data_files": {
+      "SOLARMOD/MV-DATES.L99": {
+        "sha256": "8ac3b521d47f71038440d77d4220d78ac298108146aa97ebe59bfb4698addb7c",
+        "last_entry": "08/2026,    642"
+      },
+      "SOLARMOD/MORDATES.2K": {
+        "sha256": "29c5cf10776a467f5b8b4dede343e474cdbbc793b5e499ba5698ee7f4bfee523"
+      },
+      "KP_INDEX/KP_INDEX.TXT": {
+        "sha256": "816ee8524c1bc29d1ac3b12a743b885bc122b7fc9a23c05bb6123af81a44e252",
+        "last_entry": "20260831"
+      },
+      "FORBUSH/FORBUSH.DAT": {
+        "sha256": "ac74a0889bf3666d7e37266c2c454bb709327cc2385ee5b99d89f27914594d3c"
+      }
+    },
+    "runner": "docker",
+    "docker_image": "debian@sha256:7ff6ba31527b9e336162fa061746c366c4b2032f4d2cff2078bea43f78efe3f8",
+    "docker_platform": "linux/amd64",
+    "host": {
+      "system": "Darwin",
+      "machine": "arm64",
+      "release": "27.0.0"
+    }
+  },
+  "status": "ok",
+  "finished_utc": "2026-10-25T21:30:36+00:00",
+  "scenario_warnings": {
+    "SCL-PUQ_out_FL370_gs470_2020-02_D_WB_dt5": [],
+    "SCL-PUQ_out_FL370_gs470_2024-10_D_WB_dt5": [],
+    "SCL-PUQ_out_FL370_gs470_2026-08_D_WB_dt5": [],
+    "SCL-PUQ_out_FL330_gs470_2020-02_E_ICRP103_dt5": [],
+    "SCL-PUQ_out_FL370_gs470_2020-02_E_ICRP103_dt5": [],
+    "SCL-PUQ_out_FL390_gs470_2020-02_E_ICRP103_dt5": [],
+    "SCL-PUQ_in_FL330_gs470_2020-02_E_ICRP103_dt5": [],
+    "SCL-PUQ_in_FL370_gs470_2020-02_E_ICRP103_dt5": [],
+    "SCL-PUQ_in_FL390_gs470_2020-02_E_ICRP103_dt5": [],
+    "SCL-PUQ_out_FL370_gs400_2020-02_E_ICRP103_dt5": [],
+    "SCL-PUQ_in_FL370_gs400_2020-02_E_ICRP103_dt5": [],
+    "SCL-PUQ_out_FL370_gs470_2020-02_E_ICRP103_dt2": [],
+    "SCL-PUQ_out_FL370_gs470_2020-02_E_ICRP103_dt1": [],
+    "SCL-PUQ_out_FL330_gs470_2024-10_E_ICRP103_dt5": [],
+    "SCL-PUQ_out_FL370_gs470_2024-10_E_ICRP103_dt5": [],
+    "SCL-PUQ_out_FL390_gs470_2024-10_E_ICRP103_dt5": [],
+    "SCL-PUQ_in_FL330_gs470_2024-10_E_ICRP103_dt5": [],
+    "SCL-PUQ_in_FL370_gs470_2024-10_E_ICRP103_dt5": [],
+    "SCL-PUQ_in_FL390_gs470_2024-10_E_ICRP103_dt5": [],
+    "SCL-PUQ_out_FL370_gs400_2024-10_E_ICRP103_dt5": [],
+    "SCL-PUQ_in_FL370_gs400_2024-10_E_ICRP103_dt5": [],
+    "SCL-PUQ_out_FL330_gs470_2026-08_E_ICRP103_dt5": [],
+    "SCL-PUQ_out_FL370_gs470_2026-08_E_ICRP103_dt5": [],
+    "SCL-PUQ_out_FL390_gs470_2026-08_E_ICRP103_dt5": [],
+    "SCL-PUQ_in_FL330_gs470_2026-08_E_ICRP103_dt5": [],
+    "SCL-PUQ_in_FL370_gs470_2026-08_E_ICRP103_dt5": [],
+    "SCL-PUQ_in_FL390_gs470_2026-08_E_ICRP103_dt5": [],
+    "SCL-PUQ_out_FL370_gs400_2026-08_E_ICRP103_dt5": [],
+    "SCL-PUQ_in_FL370_gs400_2026-08_E_ICRP103_dt5": [],
+    "SCL-PUQ_out_FL370_gs470_2020-02_H10_dt5": [],
+    "SCL-PUQ_out_FL370_gs470_2024-10_H10_dt5": [],
+    "SCL-PUQ_out_FL370_gs470_2026-08_H10_dt5": []
+  },
+  "batches": [
+    {
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--platform",
+        "linux/amd64",
+        "-v",
+        "/Users/mhaacke/Repository/AirRadiation/AirRadiation/third_party/cari7/CARI_7_DVD:/opt/cari7:ro",
+        "-v",
+        "/Users/mhaacke/Repository/AirRadiation/AirRadiation/runs/scl_puq_v1/cari_work/B00_D_WB_202002:/work",
+        "-w",
+        "/work",
+        "debian@sha256:7ff6ba31527b9e336162fa061746c366c4b2032f4d2cff2078bea43f78efe3f8",
+        "/opt/cari7/cari-7_linux_intel_exe"
+      ],
+      "returncode": 0,
+      "started_utc": "2026-10-25T21:25:40+00:00",
+      "finished_utc": "2026-10-25T21:26:20+00:00",
+      "wall_s": 39.227125
+    },
+    {
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--platform",
+        "linux/amd64",
+        "-v",
+        "/Users/mhaacke/Repository/AirRadiation/AirRadiation/third_party/cari7/CARI_7_DVD:/opt/cari7:ro",
+        "-v",
+        "/Users/mhaacke/Repository/AirRadiation/AirRadiation/runs/scl_puq_v1/cari_work/B01_D_WB_202410:/work",
+        "-w",
+        "/work",
+        "debian@sha256:7ff6ba31527b9e336162fa061746c366c4b2032f4d2cff2078bea43f78efe3f8",
+        "/opt/cari7/cari-7_linux_intel_exe"
+      ],
+      "returncode": 0,
+      "started_utc": "2026-10-25T21:25:40+00:00",
+      "finished_utc": "2026-10-25T21:26:20+00:00",
+      "wall_s": 39.578458
+    },
+    {
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--platform",
+        "linux/amd64",
+        "-v",
+        "/Users/mhaacke/Repository/AirRadiation/AirRadiation/third_party/cari7/CARI_7_DVD:/opt/cari7:ro",
+        "-v",
+        "/Users/mhaacke/Repository/AirRadiation/AirRadiation/runs/scl_puq_v1/cari_work/B02_D_WB_202608:/work",
+        "-w",
+        "/work",
+        "debian@sha256:7ff6ba31527b9e336162fa061746c366c4b2032f4d2cff2078bea43f78efe3f8",
+        "/opt/cari7/cari-7_linux_intel_exe"
+      ],
+      "returncode": 0,
+      "started_utc": "2026-10-25T21:25:40+00:00",
+      "finished_utc": "2026-10-25T21:26:20+00:00",
+      "wall_s": 39.754537
+    },
+    {
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--platform",
+        "linux/amd64",
+        "-v",
+        "/Users/mhaacke/Repository/AirRadiation/AirRadiation/third_party/cari7/CARI_7_DVD:/opt/cari7:ro",
+        "-v",
+        "/Users/mhaacke/Repository/AirRadiation/AirRadiation/runs/scl_puq_v1/cari_work/B03_E_ICRP103_202002:/work",
+        "-w",
+        "/work",
+        "debian@sha256:7ff6ba31527b9e336162fa061746c366c4b2032f4d2cff2078bea43f78efe3f8",
+        "/opt/cari7/cari-7_linux_intel_exe"
+      ],
+      "returncode": 0,
+      "started_utc": "2026-10-25T21:25:40+00:00",
+      "finished_utc": "2026-10-25T21:27:25+00:00",
+      "wall_s": 104.233624
+    },
+    {
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--platform",
+        "linux/amd64",
+        "-v",
+        "/Users/mhaacke/Repository/AirRadiation/AirRadiation/third_party/cari7/CARI_7_DVD:/opt/cari7:ro",
+        "-v",
+        "/Users/mhaacke/Repository/AirRadiation/AirRadiation/runs/scl_puq_v1/cari_work/B04_E_ICRP103_202002:/work",
+        "-w",
+        "/work",
+        "debian@sha256:7ff6ba31527b9e336162fa061746c366c4b2032f4d2cff2078bea43f78efe3f8",
+        "/opt/cari7/cari-7_linux_intel_exe"
+      ],
+      "returncode": 0,
+      "started_utc": "2026-10-25T21:26:20+00:00",
+      "finished_utc": "2026-10-25T21:28:02+00:00",
+      "wall_s": 101.90623
+    },
+    {
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--platform",
+        "linux/amd64",
+        "-v",
+        "/Users/mhaacke/Repository/AirRadiation/AirRadiation/third_party/cari7/CARI_7_DVD:/opt/cari7:ro",
+        "-v",
+        "/Users/mhaacke/Repository/AirRadiation/AirRadiation/runs/scl_puq_v1/cari_work/B05_E_ICRP103_202002:/work",
+        "-w",
+        "/work",
+        "debian@sha256:7ff6ba31527b9e336162fa061746c366c4b2032f4d2cff2078bea43f78efe3f8",
+        "/opt/cari7/cari-7_linux_intel_exe"
+      ],
+      "returncode": 0,
+      "started_utc": "2026-10-25T21:26:20+00:00",
+      "finished_utc": "2026-10-25T21:28:13+00:00",
+      "wall_s": 112.740869
+    },
+    {
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--platform",
+        "linux/amd64",
+        "-v",
+        "/Users/mhaacke/Repository/AirRadiation/AirRadiation/third_party/cari7/CARI_7_DVD:/opt/cari7:ro",
+        "-v",
+        "/Users/mhaacke/Repository/AirRadiation/AirRadiation/runs/scl_puq_v1/cari_work/B06_E_ICRP103_202002:/work",
+        "-w",
+        "/work",
+        "debian@sha256:7ff6ba31527b9e336162fa061746c366c4b2032f4d2cff2078bea43f78efe3f8",
+        "/opt/cari7/cari-7_linux_intel_exe"
+      ],
+      "returncode": 0,
+      "started_utc": "2026-10-25T21:26:20+00:00",
+      "finished_utc": "2026-10-25T21:26:58+00:00",
+      "wall_s": 38.208073
+    },
+    {
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--platform",
+        "linux/amd64",
+        "-v",
+        "/Users/mhaacke/Repository/AirRadiation/AirRadiation/third_party/cari7/CARI_7_DVD:/opt/cari7:ro",
+        "-v",
+        "/Users/mhaacke/Repository/AirRadiation/AirRadiation/runs/scl_puq_v1/cari_work/B07_E_ICRP103_202410:/work",
+        "-w",
+        "/work",
+        "debian@sha256:7ff6ba31527b9e336162fa061746c366c4b2032f4d2cff2078bea43f78efe3f8",
+        "/opt/cari7/cari-7_linux_intel_exe"
+      ],
+      "returncode": 0,
+      "started_utc": "2026-10-25T21:26:58+00:00",
+      "finished_utc": "2026-10-25T21:28:08+00:00",
+      "wall_s": 69.607175
+    },
+    {
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--platform",
+        "linux/amd64",
+        "-v",
+        "/Users/mhaacke/Repository/AirRadiation/AirRadiation/third_party/cari7/CARI_7_DVD:/opt/cari7:ro",
+        "-v",
+        "/Users/mhaacke/Repository/AirRadiation/AirRadiation/runs/scl_puq_v1/cari_work/B08_E_ICRP103_202410:/work",
+        "-w",
+        "/work",
+        "debian@sha256:7ff6ba31527b9e336162fa061746c366c4b2032f4d2cff2078bea43f78efe3f8",
+        "/opt/cari7/cari-7_linux_intel_exe"
+      ],
+      "returncode": 0,
+      "started_utc": "2026-10-25T21:27:25+00:00",
+      "finished_utc": "2026-10-25T21:28:34+00:00",
+      "wall_s": 69.148559
+    },
+    {
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--platform",
+        "linux/amd64",
+        "-v",
+        "/Users/mhaacke/Repository/AirRadiation/AirRadiation/third_party/cari7/CARI_7_DVD:/opt/cari7:ro",
+        "-v",
+        "/Users/mhaacke/Repository/AirRadiation/AirRadiation/runs/scl_puq_v1/cari_work/B09_E_ICRP103_202410:/work",
+        "-w",
+        "/work",
+        "debian@sha256:7ff6ba31527b9e336162fa061746c366c4b2032f4d2cff2078bea43f78efe3f8",
+        "/opt/cari7/cari-7_linux_intel_exe"
+      ],
+      "returncode": 0,
+      "started_utc": "2026-10-25T21:28:02+00:00",
+      "finished_utc": "2026-10-25T21:29:10+00:00",
+      "wall_s": 68.58001
+    },
+    {
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--platform",
+        "linux/amd64",
+        "-v",
+        "/Users/mhaacke/Repository/AirRadiation/AirRadiation/third_party/cari7/CARI_7_DVD:/opt/cari7:ro",
+        "-v",
+        "/Users/mhaacke/Repository/AirRadiation/AirRadiation/runs/scl_puq_v1/cari_work/B10_E_ICRP103_202410:/work",
+        "-w",
+        "/work",
+        "debian@sha256:7ff6ba31527b9e336162fa061746c366c4b2032f4d2cff2078bea43f78efe3f8",
+        "/opt/cari7/cari-7_linux_intel_exe"
+      ],
+      "returncode": 0,
+      "started_utc": "2026-10-25T21:28:08+00:00",
+      "finished_utc": "2026-10-25T21:29:26+00:00",
+      "wall_s": 77.97654
+    },
+    {
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--platform",
+        "linux/amd64",
+        "-v",
+        "/Users/mhaacke/Repository/AirRadiation/AirRadiation/third_party/cari7/CARI_7_DVD:/opt/cari7:ro",
+        "-v",
+        "/Users/mhaacke/Repository/AirRadiation/AirRadiation/runs/scl_puq_v1/cari_work/B11_E_ICRP103_202608:/work",
+        "-w",
+        "/work",
+        "debian@sha256:7ff6ba31527b9e336162fa061746c366c4b2032f4d2cff2078bea43f78efe3f8",
+        "/opt/cari7/cari-7_linux_intel_exe"
+      ],
+      "returncode": 0,
+      "started_utc": "2026-10-25T21:28:13+00:00",
+      "finished_utc": "2026-10-25T21:29:21+00:00",
+      "wall_s": 68.216364
+    },
+    {
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--platform",
+        "linux/amd64",
+        "-v",
+        "/Users/mhaacke/Repository/AirRadiation/AirRadiation/third_party/cari7/CARI_7_DVD:/opt/cari7:ro",
+        "-v",
+        "/Users/mhaacke/Repository/AirRadiation/AirRadiation/runs/scl_puq_v1/cari_work/B12_E_ICRP103_202608:/work",
+        "-w",
+        "/work",
+        "debian@sha256:7ff6ba31527b9e336162fa061746c366c4b2032f4d2cff2078bea43f78efe3f8",
+        "/opt/cari7/cari-7_linux_intel_exe"
+      ],
+      "returncode": 0,
+      "started_utc": "2026-10-25T21:28:34+00:00",
+      "finished_utc": "2026-10-25T21:29:43+00:00",
+      "wall_s": 68.959555
+    },
+    {
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--platform",
+        "linux/amd64",
+        "-v",
+        "/Users/mhaacke/Repository/AirRadiation/AirRadiation/third_party/cari7/CARI_7_DVD:/opt/cari7:ro",
+        "-v",
+        "/Users/mhaacke/Repository/AirRadiation/AirRadiation/runs/scl_puq_v1/cari_work/B13_E_ICRP103_202608:/work",
+        "-w",
+        "/work",
+        "debian@sha256:7ff6ba31527b9e336162fa061746c366c4b2032f4d2cff2078bea43f78efe3f8",
+        "/opt/cari7/cari-7_linux_intel_exe"
+      ],
+      "returncode": 0,
+      "started_utc": "2026-10-25T21:29:10+00:00",
+      "finished_utc": "2026-10-25T21:30:18+00:00",
+      "wall_s": 68.156877
+    },
+    {
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--platform",
+        "linux/amd64",
+        "-v",
+        "/Users/mhaacke/Repository/AirRadiation/AirRadiation/third_party/cari7/CARI_7_DVD:/opt/cari7:ro",
+        "-v",
+        "/Users/mhaacke/Repository/AirRadiation/AirRadiation/runs/scl_puq_v1/cari_work/B14_E_ICRP103_202608:/work",
+        "-w",
+        "/work",
+        "debian@sha256:7ff6ba31527b9e336162fa061746c366c4b2032f4d2cff2078bea43f78efe3f8",
+        "/opt/cari7/cari-7_linux_intel_exe"
+      ],
+      "returncode": 0,
+      "started_utc": "2026-10-25T21:29:21+00:00",
+      "finished_utc": "2026-10-25T21:30:36+00:00",
+      "wall_s": 74.804002
+    },
+    {
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--platform",
+        "linux/amd64",
+        "-v",
+        "/Users/mhaacke/Repository/AirRadiation/AirRadiation/third_party/cari7/CARI_7_DVD:/opt/cari7:ro",
+        "-v",
+        "/Users/mhaacke/Repository/AirRadiation/AirRadiation/runs/scl_puq_v1/cari_work/B15_H10_202002:/work",
+        "-w",
+        "/work",
+        "debian@sha256:7ff6ba31527b9e336162fa061746c366c4b2032f4d2cff2078bea43f78efe3f8",
+        "/opt/cari7/cari-7_linux_intel_exe"
+      ],
+      "returncode": 0,
+      "started_utc": "2026-10-25T21:29:26+00:00",
+      "finished_utc": "2026-10-25T21:30:04+00:00",
+      "wall_s": 37.505135
+    },
+    {
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--platform",
+        "linux/amd64",
+        "-v",
+        "/Users/mhaacke/Repository/AirRadiation/AirRadiation/third_party/cari7/CARI_7_DVD:/opt/cari7:ro",
+        "-v",
+        "/Users/mhaacke/Repository/AirRadiation/AirRadiation/runs/scl_puq_v1/cari_work/B16_H10_202410:/work",
+        "-w",
+        "/work",
+        "debian@sha256:7ff6ba31527b9e336162fa061746c366c4b2032f4d2cff2078bea43f78efe3f8",
+        "/opt/cari7/cari-7_linux_intel_exe"
+      ],
+      "returncode": 0,
+      "started_utc": "2026-10-25T21:29:43+00:00",
+      "finished_utc": "2026-10-25T21:30:20+00:00",
+      "wall_s": 36.913787
+    },
+    {
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--platform",
+        "linux/amd64",
+        "-v",
+        "/Users/mhaacke/Repository/AirRadiation/AirRadiation/third_party/cari7/CARI_7_DVD:/opt/cari7:ro",
+        "-v",
+        "/Users/mhaacke/Repository/AirRadiation/AirRadiation/runs/scl_puq_v1/cari_work/B17_H10_202608:/work",
+        "-w",
+        "/work",
+        "debian@sha256:7ff6ba31527b9e336162fa061746c366c4b2032f4d2cff2078bea43f78efe3f8",
+        "/opt/cari7/cari-7_linux_intel_exe"
+      ],
+      "returncode": 0,
+      "started_utc": "2026-10-25T21:30:04+00:00",
+      "finished_utc": "2026-10-25T21:30:36+00:00",
+      "wall_s": 32.337541
+    }
+  ],
+  "created_utc": "2026-10-25T21:30:36+00:00"
+}

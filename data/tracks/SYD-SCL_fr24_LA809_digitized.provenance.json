@@ -1,0 +1,23 @@
+{
+  "file": "SYD-SCL_fr24_LA809_digitized.csv",
+  "kind": "waypoints horizontales aproximados (sin tiempos ni altitudes)",
+  "source": "Captura de pantalla de Flightradar24 proporcionada por el usuario el 2026-10-25, rotulada por el usuario como vuelo LA809. El sentido SYD->SCL se infiere de la posición del avión en Santiago. Fecha del vuelo desconocida.",
+  "source_image_sha256": "ac27afc4c28b907485d66141914e5d9d2d8ab5cdbab197d9a90f74b09fc3fd46",
+  "source_image_redistributed": false,
+  "method": [
+    "Proyección Web Mercator (la de Flightradar24): misma escala k en x e y.",
+    "Calibración con dos puntos: inicio de la traza en YSSY (x=223.5, y=272.5 px) y avión en SCEL (x=1008.0, y=267.2 px) -> k = 325.63 px/rad, ecuador en y = 66.4 px.",
+    "Comprobaciones independientes: la línea punteada del ecuador en la imagen está en y ≈ 68 px (1.5 px de diferencia); el límite FIR vertical en x ≈ 390 px cae en 180.5°.",
+    "Píxeles de la traza: tramos morados (ADS-B) y tramos punteados gris oscuro (estimados por Flightradar24). Línea central = mediana por franjas de 12 px.",
+    "Se descartan los puntos a menos de 300 km de cada aeropuerto (pin y avión contaminan la detección); el generador une el primer y último waypoint con los aeropuertos por geodésicas."
+  ],
+  "accuracy": "≈ ±0.2–0.3° en latitud en el tramo austral (1 px ≈ 0.06° a 72° S, más el ancho de la línea). La longitud es aproximada al mismo orden.",
+  "caveats": [
+    "El tramo más austral (≈ 140° W a 165° W, ~72° S) está punteado en Flightradar24: es una posición estimada sin cobertura ADS-B, no observada.",
+    "Un solo vuelo de fecha desconocida: las rutas oceánicas se planifican cada día según los vientos y otras restricciones, así que no representa a todos los vuelos.",
+    "No contiene altitudes ni tiempos: los perfiles y duraciones del estudio son supuestos."
+  ],
+  "southernmost_lat_deg": -72.14,
+  "path_length_km_including_airport_legs": 11962.6,
+  "geodesic_length_km": 11362.6
+}

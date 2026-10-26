@@ -1,0 +1,89 @@
+{
+  "checked_utc": "20261025T215607Z",
+  "engine": {
+    "engine": "CARI-7",
+    "executable": "cari-7_linux_intel_exe",
+    "executable_sha256": "adc60bf82bff4ab6832cb8eb2ee2d0e11967cbe0b81eac54ccf8ecb23a78019b",
+    "executable_size": 1515748,
+    "executable_arch": "x86-64",
+    "embedded_banner": "June 24, 2020 (4.1.2)",
+    "fixed_model_options": {
+      "gcr_model": "4 = ISO 2004 LIS modulado por potencial heliocéntrico CARI-6 (forzado en CARI-7)",
+      "superposition": "0 (forzado en CARI-7)",
+      "nvcr": "0 = rigidez de corte aparente ajustada por altitud, flujo isótropo (forzado)",
+      "cutoff_grids": "WGRC1965, IGRF1980, DGRF1990, IGRF1995, IGRF2000, IGRF2010; desde 2010 se usa IGRF2010 sin extrapolar",
+      "atmosphere": "U.S. Standard Atmosphere 1976 (ATMOSPHERE/FT-GM.DAT)",
+      "vehicle_shielding": "ninguno"
+    },
+    "data_tree_sha256": {
+      "AIRPORTS": "7dde43df418ec20ef9b4b59ef91202aa34900f28d61f8a529e5c3e4f0e4ea151",
+      "ATMOSPHERE": "d12e4497120ce0dc833fdbe6e5ba1c58c90bff8a1e09fc263fa7954a82458c70",
+      "DIAGNOSE": "bbf3af48811b784f7b3fb3321a94483dde8f2980af3b7243705580db0f469b06",
+      "GCR_MODELS": "10364023031e5557c2c00af05e822b74099247e0a0afdb8699d06c0630ba8cb3",
+      "SOLARMOD": "d5975f3d32c9bfee9cc2f1f4f5ac7899d4d31485b3f97e84ce7abf3f41fdf60c",
+      "CUTOFFS": "a45dcc03d3afbe1eaf1caf849a547529a4a747dfeec905c7bc859b0289431cb5",
+      "FORBUSH": "772e3eb3164ceafadd46421e8362507a94ed6b048e1ddae92242ec93385622f4",
+      "KP_INDEX": "ffece289ed9d0654ce4a89168d337010aedfd2a894d2de0ad7dd7e1eff32a193",
+      "SHOWERS": "faa9a8d4bc1128c441d62f53cf35319333c74824fbda2904912b5f929201b670"
+    },
+    "data_files": {
+      "SOLARMOD/MV-DATES.L99": {
+        "sha256": "8ac3b521d47f71038440d77d4220d78ac298108146aa97ebe59bfb4698addb7c",
+        "last_entry": "08/2026,    642"
+      },
+      "SOLARMOD/MORDATES.2K": {
+        "sha256": "29c5cf10776a467f5b8b4dede343e474cdbbc793b5e499ba5698ee7f4bfee523"
+      },
+      "KP_INDEX/KP_INDEX.TXT": {
+        "sha256": "816ee8524c1bc29d1ac3b12a743b885bc122b7fc9a23c05bb6123af81a44e252",
+        "last_entry": "20260831"
+      },
+      "FORBUSH/FORBUSH.DAT": {
+        "sha256": "ac74a0889bf3666d7e37266c2c454bb709327cc2385ee5b99d89f27914594d3c"
+      }
+    },
+    "runner": "docker",
+    "docker_image": "debian@sha256:7ff6ba31527b9e336162fa061746c366c4b2032f4d2cff2078bea43f78efe3f8",
+    "docker_platform": "linux/amd64",
+    "docker_local_copy": true,
+    "host": {
+      "system": "Darwin",
+      "machine": "arm64",
+      "release": "27.0.0"
+    }
+  },
+  "official_example": {
+    "example": "Examples/EXAMPLE.DEG (01/2002, FL-27), tally ICRP 103 effective dose",
+    "reference_total_uSv": 0.50704,
+    "computed_total_uSv": 0.50704,
+    "reference_label": "ICRP Pub. 103 EFFECTIVE DOSE",
+    "computed_label": "ICRP Pub. 103 EFFECTIVE DOSE",
+    "n_steps_reference": 25,
+    "n_steps_computed": 25,
+    "max_relative_difference_steps": 0.0,
+    "identical": true,
+    "parser_cum_equals_sum": true,
+    "parser_rate_integral_uSv": 0.5070415666666667,
+    "run": {
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--platform",
+        "linux/amd64",
+        "-v",
+        "/Users/mhaacke/Repository/AirRadiation/AirRadiation/third_party/cari7/CARI_7_DVD:/opt/cari7:ro",
+        "-v",
+        "/Users/mhaacke/Repository/AirRadiation/AirRadiation/validation/official_example/20261025T215607Z:/work",
+        "debian@sha256:7ff6ba31527b9e336162fa061746c366c4b2032f4d2cff2078bea43f78efe3f8",
+        "sh",
+        "-c",
+        "set -e; mkdir -p /tmp/cari_run; cd /opt/cari7; cp -R AIRPORTS ATMOSPHERE DIAGNOSE GCR_MODELS SOLARMOD CUTOFFS FORBUSH KP_INDEX SHOWERS /tmp/cari_run/; cd /work; for f in *; do if [ -f \"$f\" ]; then cp \"$f\" /tmp/cari_run/; fi; done; cd /tmp/cari_run; set +e; /opt/cari7/cari-7_linux_intel_exe; rc=$?; set -e; for f in *.SUM *.DAT FILELIST.TXT fort.40 DEBUGGER.DAT; do if [ -f \"$f\" ]; then cp \"$f\" /work/; fi; done; if [ -f GCR_MODELS/ISO_GCR2.OUT ]; then cp GCR_MODELS/ISO_GCR2.OUT /work/ISO_GCR2.OUT; fi; exit $rc"
+      ],
+      "returncode": 0,
+      "started_utc": "2026-10-25T21:56:07+00:00",
+      "finished_utc": "2026-10-25T21:56:10+00:00",
+      "wall_s": 2.427501
+    }
+  }
+}

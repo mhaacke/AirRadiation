@@ -1,0 +1,9 @@
+{
+  "all_flight_checks_ok": true,
+  "n_flights": 27,
+  "max_abs_integral_rel_diff": 4.69352671255141e-05,
+  "max_position_offset_km": 0.006896085554658031,
+  "max_depth_rel_diff_on_table_nodes": 1.4971987412071286e-06,
+  "max_depth_rel_diff_any": 2.1561292088634332e-05,
+  "convergence": []
+}

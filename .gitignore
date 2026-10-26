@@ -218,3 +218,13 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# CARI-7 installation (downloaded from the FAA by scripts/install_cari7.py; not redistributed)
+third_party/cari7/*
+!third_party/cari7/README.md
+# per-run working copies
+runs/*/cari_work/**/AIRPORTS/
+# copy of the official CARI-7 input (distribution data; not redistributed)
+validation/official_example/*/EXAMPLE.DEG
+# early end-to-end test generated with obsolete code (superseded by runs/matrix_v1)
+runs/e2e_SCL-MEL/

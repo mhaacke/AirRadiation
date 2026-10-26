@@ -1,0 +1,9 @@
+ VIEWER     cat         
+ VIEWER    =cat         
+ OS         UNIX        
+ OS        =UNIX 
+ MENUS      NO!         
+ MENUS     =NO!
+ CARI7.RPT  NO!         
+ CARI7.RPT =           0
+ END        END         

@@ -1,0 +1,17 @@
+{
+  "source": "OurAirports",
+  "url": "https://davidmegginson.github.io/ourairports-data/airports.csv",
+  "license": "Public Domain (\"All data is released to the Public Domain\")",
+  "license_url": "https://ourairports.com/data/",
+  "retrieved_utc": "2026-10-25T21:25:13+00:00",
+  "source_file_sha256": "fe7f0d9dc2646e41b0cc520f1733d99b9c76a6b26a3e6a55f66fa89e62083ad5",
+  "datum": "WGS84 (geographic coordinates, decimal degrees)",
+  "elevation": "field elevation in feet above mean sea level",
+  "icao": [
+    "SCEL",
+    "YMML",
+    "YSSY",
+    "NZAA",
+    "SCCI"
+  ]
+}

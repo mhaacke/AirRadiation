@@ -1,0 +1,6 @@
+icao,iata,name,municipality,latitude_deg,longitude_deg,elevation_ft,source_id
+SCEL,SCL,Comodoro Arturo Merino Benítez International Airport,Santiago,-33.393001556396484,-70.78579711914062,1555,6015
+YMML,MEL,Melbourne Airport,Melbourne,-37.670732,144.837898,434,27066
+YSSY,SYD,Sydney Kingsford Smith International Airport,Sydney (Mascot),-33.946098,151.177002,21,27145
+NZAA,AKL,Auckland International Airport,Auckland,-37.01199,174.786331,23,5023
+SCCI,PUQ,President Carlos Ibáñez International Airport,Punta Arenas,-53.002602,-70.854599,139,6009

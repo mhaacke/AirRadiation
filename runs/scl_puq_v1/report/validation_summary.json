@@ -1,0 +1,24 @@
+{
+  "all_flight_checks_ok": true,
+  "n_flights": 32,
+  "max_abs_integral_rel_diff": 9.51534516935304e-06,
+  "max_position_offset_km": 0.006905890348854224,
+  "max_depth_rel_diff_on_table_nodes": 2.4919075304330462e-06,
+  "max_depth_rel_diff_any": 2.243924893496896e-05,
+  "convergence": [
+    {
+      "scenario_ref": "SCL-PUQ_out_FL370_gs470_2020-02_E_ICRP103_dt5",
+      "scenario": "SCL-PUQ_out_FL370_gs470_2020-02_E_ICRP103_dt2",
+      "dose_ref": 5.8798,
+      "dose": 5.8798,
+      "diff_pct": 0.0
+    },
+    {
+      "scenario_ref": "SCL-PUQ_out_FL370_gs470_2020-02_E_ICRP103_dt5",
+      "scenario": "SCL-PUQ_out_FL370_gs470_2020-02_E_ICRP103_dt1",
+      "dose_ref": 5.8798,
+      "dose": 5.8798,
+      "diff_pct": 0.0
+    }
+  ]
+}

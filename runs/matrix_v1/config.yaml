@@ -1,0 +1,151 @@
+# Estudio de escenarios: exposición a radiación cósmica galáctica (GCR) en rutas australes.
+# Todo lo marcado como "supuesto" es una entrada configurable, no un dato operacional.
+
+study:
+  name: rutas_australes_gcr_v1
+  description: >-
+    Comparación de escenarios sintéticos SCL–MEL, SCL–SYD y SCL–AKL (referencia) con CARI-7.
+    Estudio de escenarios; no reconstruye vuelos reales ni es una herramienta operacional certificada.
+    Sólo fondo de radiación cósmica galáctica; los eventos de partículas solares requieren un análisis específico posterior.
+  runs_dir: runs
+  sampling_min: 5            # muestreo de waypoints de la trayectoria (min); CARI integra internamente a 1 min
+  departure_day: 15          # día y hora de salida: sólo etiquetan timestamps; CARI usa el promedio mensual
+  departure_time_utc: "03:00"
+
+engine:
+  name: cari7
+  install_dir: third_party/cari7/CARI_7_DVD
+  executable: cari-7_linux_intel_exe
+  runner: docker             # docker (host no x86-64) | native (Linux x86-64)
+  docker_image: debian@sha256:7ff6ba31527b9e336162fa061746c366c4b2032f4d2cff2078bea43f78efe3f8  # debian:bookworm-slim
+  docker_platform: linux/amd64
+  max_parallel: 4
+  timeout_s: 21600
+
+airports_dir: data/airports  # OurAirports, ver data/airports/provenance.json
+
+routes:
+  SCL-MEL: {a: SCEL, b: YMML}
+  SCL-SYD: {a: SCEL, b: YSSY}
+  SCL-AKL: {a: SCEL, b: NZAA, note: referencia}
+
+# outbound: a -> b (Santiago hacia Oceanía); inbound: b -> a
+directions: [outbound, inbound]
+
+profiles:
+  FL330:
+    type: constant
+    cruise_fl: 330
+    climb_min: 25
+    descent_min: 30
+    note: "Supuesto: crucero constante FL330 con ascenso/descenso lineales."
+  FL370:
+    type: constant
+    cruise_fl: 370
+    climb_min: 30
+    descent_min: 32
+    note: "Supuesto: crucero constante FL370 con ascenso/descenso lineales."
+  FL410:
+    type: constant
+    cruise_fl: 410
+    climb_min: 38
+    descent_min: 35
+    note: >-
+      Supuesto: crucero constante FL410. Cota superior hipotética; muchos aviones de largo alcance
+      no pueden iniciar el crucero a FL410 con peso de despegue alto.
+  STEP330-390:
+    type: step
+    levels_fl: [330, 350, 370, 390]
+    cruise_fractions: [0.25, 0.25, 0.25, 0.25]   # fracción del tiempo nivelado en cada escalón
+    step_climb_fpm: 1000                         # régimen de cada ascenso escalonado
+    climb_min: 25
+    descent_min: 32
+    note: "Supuesto configurable de crucero escalonado; no es un perfil operacional validado."
+
+durations:
+  gs470:
+    description: >-
+      Supuesto: tiempo en el aire = distancia geodésica / 470 kt de velocidad media respecto al suelo,
+      igual en ambos sentidos. No es un horario comercial ni un tiempo en el aire real.
+    ground_speed_kt: 470
+  asim_viento:
+    description: >-
+      Supuesto ilustrativo de asimetría por viento: hacia el oeste (SCL→Oceanía) más largo y hacia el
+      este más corto. Valores elegidos a mano (≈ ±6.5 % sobre gs470), no derivados de datos meteorológicos.
+    airborne_min:
+      SCL-MEL: {outbound: 830, inbound: 730}
+      SCL-SYD: {outbound: 835, inbound: 735}
+      SCL-AKL: {outbound: 710, inbound: 625}
+
+dates:
+  "2020-02":
+    year: 2020
+    month: 2
+    label: "baja modulación solar (feb-2020)"
+    justification: >-
+      Potencial heliocéntrico mensual en SOLARMOD/MV-DATES.L99 de CARI-7: 254 MV (entre los más bajos
+      desde 2010). Número de manchas SILSO V2.0 suavizado a 13 meses: 2.7 (mínimo del ciclo 24/25 en
+      dic-2019, 1.8).
+  "2024-10":
+    year: 2024
+    month: 10
+    label: "alta modulación solar (oct-2024)"
+    justification: >-
+      Potencial heliocéntrico mensual en MV-DATES.L99: 1040 MV. Número de manchas SILSO V2.0
+      suavizado a 13 meses: 160.9, máximo del ciclo 25.
+  # Ambas fechas son posteriores a 2010: CARI-7 usa la misma rejilla de rigidez de corte (IGRF2010),
+  # por lo que la diferencia entre fechas refleja la modulación solar del fondo galáctico en el modelo.
+
+# Matriz de escenarios: unión de bloques; cada bloque es un producto cartesiano.
+# Un escenario repetido en varios bloques se calcula una sola vez.
+matrix:
+  - block: principal
+    routes: [SCL-MEL, SCL-SYD, SCL-AKL]
+    directions: [outbound, inbound]
+    profiles: [FL330, FL370, FL410, STEP330-390]
+    durations: [gs470]
+    dates: ["2020-02", "2024-10"]
+    quantities: [E_ICRP103]
+  - block: sensibilidad_duracion
+    routes: [SCL-MEL, SCL-SYD, SCL-AKL]
+    directions: [outbound, inbound]
+    profiles: [FL370]
+    durations: [asim_viento]
+    dates: ["2020-02", "2024-10"]
+    quantities: [E_ICRP103]
+  - block: convergencia
+    routes: [SCL-MEL]
+    directions: [outbound]
+    profiles: [FL370]
+    durations: [gs470]
+    dates: ["2020-02"]
+    quantities: [E_ICRP103]
+    sampling_min: [5, 2, 1]
+  - block: magnitudes
+    routes: [SCL-MEL]
+    directions: [outbound]
+    profiles: [FL370]
+    durations: [gs470]
+    dates: ["2020-02", "2024-10"]
+    quantities: [E_ICRP103, H10, D_WB]
+
+# Trayectorias importadas (opcional). Unidad y referencia de altitud son obligatorias.
+imported_tracks: []
+#  - name: vuelo_ejemplo
+#    path: data/tracks/mi_vuelo.csv        # timestamp_utc, latitude_deg, longitude_deg, altitude
+#    altitude_unit: ft                     # ft | m
+#    altitude_reference: pressure_altitude # pressure_altitude | geopotential | geometric_msl
+#    dates: ["2024-10"]
+#    quantities: [E_ICRP103]
+
+annual:
+  note: >-
+    Aproximación: repite la dosis de un tramo representativo; no equivale a simular las condiciones
+    solares de cada vuelo del año. Un tramo es un vuelo de ida o de vuelta, no una rotación completa.
+    Los calendarios son hipotéticos y no se afirma que cumplan límites laborales u operacionales.
+  months: 12
+  legs_per_month: [2, 4, 6, 8]
+  representative: {profile: FL370, duration: gs470}   # promedio de ambos sentidos
+  mixed_calendars:
+    - name: mixto_MEL_SYD_AKL
+      legs_per_month: {SCL-MEL: 2, SCL-SYD: 2, SCL-AKL: 2}

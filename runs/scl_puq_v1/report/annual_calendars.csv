@@ -1,0 +1,10 @@
+calendar,kind,routes,date,legs_per_month,months,legs_total,rotations_equivalent,annual_hours,annual_dose_uSv,annual_dose_mSv,method
+SCL-PUQ 10 tramos/mes,ruta única,SCL-PUQ,2020-02,10,12,120,60.0,300.0,707.046,0.7070460000000001,aproximación: dosis representativa por tramo × número de tramos (no simula cada vuelo)
+SCL-PUQ 20 tramos/mes,ruta única,SCL-PUQ,2020-02,20,12,240,120.0,600.0,1414.092,1.4140920000000001,aproximación: dosis representativa por tramo × número de tramos (no simula cada vuelo)
+SCL-PUQ 30 tramos/mes,ruta única,SCL-PUQ,2020-02,30,12,360,180.0,900.0,2121.138,2.1211379999999997,aproximación: dosis representativa por tramo × número de tramos (no simula cada vuelo)
+SCL-PUQ 10 tramos/mes,ruta única,SCL-PUQ,2024-10,10,12,120,60.0,300.0,586.8900000000001,0.5868900000000001,aproximación: dosis representativa por tramo × número de tramos (no simula cada vuelo)
+SCL-PUQ 20 tramos/mes,ruta única,SCL-PUQ,2024-10,20,12,240,120.0,600.0,1173.7800000000002,1.1737800000000003,aproximación: dosis representativa por tramo × número de tramos (no simula cada vuelo)
+SCL-PUQ 30 tramos/mes,ruta única,SCL-PUQ,2024-10,30,12,360,180.0,900.0,1760.6700000000003,1.7606700000000004,aproximación: dosis representativa por tramo × número de tramos (no simula cada vuelo)
+SCL-PUQ 10 tramos/mes,ruta única,SCL-PUQ,2026-08,10,12,120,60.0,300.0,642.2819999999999,0.6422819999999999,aproximación: dosis representativa por tramo × número de tramos (no simula cada vuelo)
+SCL-PUQ 20 tramos/mes,ruta única,SCL-PUQ,2026-08,20,12,240,120.0,600.0,1284.5639999999999,1.2845639999999998,aproximación: dosis representativa por tramo × número de tramos (no simula cada vuelo)
+SCL-PUQ 30 tramos/mes,ruta única,SCL-PUQ,2026-08,30,12,360,180.0,900.0,1926.8459999999998,1.9268459999999998,aproximación: dosis representativa por tramo × número de tramos (no simula cada vuelo)
